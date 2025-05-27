@@ -14,18 +14,18 @@ Each folder contains markdown documentation (technical steps) of individual lab 
 
 ## 📁 Repository Structure
 SOC-Hands-On-Challenge/
-├── Log_Analysis/
- └── README.md
-├── Wireshark_Basics/
- └── README.md
-├── Handon_Splunk/
-  └── README.md
-├── Phishing_Analysis/
-  └── README.md
+- ├── Log_Analysis/
+    └── README.md
+- ├── Wireshark_Basics/
+    └── README.md
+- ├── Handon_Splunk/
+    └── README.md
+- ├── Phishing_Analysis/
+    └── README.md
 ...
-├── Wazuh_Setup/
- └── README.md
-└── Screenshots/
+- ├── Wazuh_Setup/
+     └── README.md
+- └── Screenshots/
 
 ## 🚀 Tools Used
 - Splunk (Free Edition)
