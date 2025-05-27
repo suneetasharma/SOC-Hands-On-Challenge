@@ -1,3 +1,16 @@
-*.pyc
-__pycache__/
+# Ignore all logs and temp files
 *.log
+*.tmp
+*.bak
+
+# VS Code config
+.vscode/
+
+# macOS and Windows system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore screenshots or raw assets unless selected
+Screenshots/
+Assets/
