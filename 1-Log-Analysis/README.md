@@ -60,4 +60,4 @@ Screenshot:
 🎯 Conclusion
 - Understanding Log Analysis: Logs are a critical tool for detecting, investigating, and responding to security incidents.
 - SOC Analyst Role: SOC Analysts depend heavily on logs to detect threats, trace activity, and maintain compliance.
-- Practical Insight: Hands-on log generation and detection reinforce key skills for entry-level SOC roles.
+- Practical Insight: Hands-on log generation and detection reinforce key skills for SOC roles.
