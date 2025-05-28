@@ -1,8 +1,9 @@
-## 1 Log Analysis
+## Log Analysis
 
-## 🧪 Day 01 - Log Analysis: Introduction to Logs and PowerShell Event Monitoring
+###🧪 Day 01 - Log Analysis: Introduction to Logs and PowerShell Event Monitoring
 
-📌Objective: To demonstrate how logs from different systems can be collected, analyzed, and used for security monitoring. This lab focuses on generating basic logs on both Windows and Linux systems and shows how SOC Analysts use logs to detect security incidents.
+📌*Objective:* To demonstrate how logs from different systems can be collected, analyzed, and used for security monitoring. This lab focuses on generating basic logs on both Windows and Linux systems and shows how SOC Analysts use logs to detect security incidents.
+
 ---
 
 ### 📖 What is a Log?
@@ -17,7 +18,7 @@ Logs are essential for:
 - Conducting forensic investigations
 ---
 
-🔬 Lab Task: Simulating and Detecting Windows PowerShell Events
+🔬 *Lab Task*: **Simulating and Detecting Windows PowerShell Events**
 
 
 ### 🖥️ Lab Setup
