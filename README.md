@@ -4,6 +4,8 @@
 
 Welcome to my SOC Analyst 30-Day Challenge repository! This project showcases hands-on experience across six key SOC domains through daily lab exercises. Each lab demonstrates applied skills in threat detection, SIEM/EDR log analysis, incident response, packet capture review and the use of popular open-source tools.
 
+---
+
 ## 📌 Domains Covered
 
 - 📝 Log Analysis
@@ -14,6 +16,7 @@ Welcome to my SOC Analyst 30-Day Challenge repository! This project showcases ha
 - 🔍 Digital Forensics
 - 🛠️ Wazuh Setup, Monitoring, and Alerting
 
+---
 
 ## 🎯 Objectives
 
@@ -30,6 +33,7 @@ Each lab folder contains detailed documentation, screenshots, and my personal re
 ## 📁 Repository Structure
 
 The labs are grouped by topic, with each folder covering 5 days of hands-on activities.
+
 SOC-Hands-On-Challenge/
 ├── 1-Log-Analysis/ # Days 01–05: Syslog parsing, SSH brute-force detection
 ├── 2-Network-Traffic-Analysis/ # Days 06–10: PCAPs, DNS, ARP spoofing (Wireshark)
@@ -42,11 +46,15 @@ SOC-Hands-On-Challenge/
 ├── LICENSE
 └── README.md
 
+
 Each **DAYXX** folder includes:
 - `README.md` : Goals, tools used, analysis steps, alerts observerd, takeaways
 - Referenced screenshots from `Screenshots/` 
 
+---
+
 ## 🚀 Tools & Platforms Used
+
 
 | Tool/Platform     | Purpose                                  |
 |-------------------|------------------------------------------|
@@ -57,6 +65,8 @@ Each **DAYXX** folder includes:
 | **VirusTotal**    | IOC enrichment and threat classification |
 | **Kali Linux**    | Adversary simulation and forensics       |
 | **CyberChef**     | Log decoding, hash conversion, etc.      |
+
+---
 
 ## 🎯 Project Goals
 
