@@ -84,7 +84,7 @@ This command lists all local user accounts on the system, whcih could be used by
 
   4. Review the log showing the execution of the `Get-LocalUser` command
 
-📸 PowerShell EventID 4104 ![PowerShell Log - EventID 4104](../Screenshots/Day01-EventID4104.png)
+📸 PowerShell EventID 4104 ![PowerShell Script Block Logging - EventID 4104](../Screenshots/Day01-EventID4104.png)
 
 
 ## 🧠*Key Learning Outcomes*
