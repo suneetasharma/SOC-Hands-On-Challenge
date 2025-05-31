@@ -1,6 +1,6 @@
 ## Log Analysis
 
-🧪 Day 01 - Log Analysis: Introduction to Logs and PowerShell Event Monitoring
+🧪 Day01 - Log Analysis: Introduction to Logs and PowerShell Event Monitoring
 
 ## 📌*Objective:* 
 
@@ -103,5 +103,3 @@ This command lists all local user accounts on the system, whcih could be used by
 - Understanding Logs: Logs provide critical visibility for detecting and investigating threats.
 - SOC Analyst Relevance: Analysts depend on logs like PowerShell execution records to trace suspicious behavior.
 - Hands-On Insight: This lab reinforces key detection skills used in real-world SOC environments.
-
-
