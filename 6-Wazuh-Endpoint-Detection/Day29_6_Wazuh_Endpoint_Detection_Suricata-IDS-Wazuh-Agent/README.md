@@ -1,7 +1,7 @@
-# 🛡️ Day 01 – [Lab Title Placeholder]
+# 🛡️ Day 29 – [Lab Title Placeholder]
 
 ## 📌 Objective
-> Describe the goal of the lab (e.g., detect suspicious login events, analyze PCAP traffic
+> Describe the goal of the lab (e.g., detect suspicious login events, analyze PCAP traffic)
 
 ---
 
@@ -19,14 +19,14 @@
 
 ## 📸 Screenshot
 <p align="center">
-  <img src="../../Screenshots/Day01.png" alt="Screenshot Placeholder" width="600">
+  <img src="../../Screenshots/Day29.png" alt="Screenshot Placeholder" width="600">
 </p>
 
 ---
 
 ## 🧠 Key Learnings
 - What did you discover?
-- How does this relate to MITRE ATT
+- How does this relate to MITRE ATT&CK or real-world SOC tasks?
 
 ---
 

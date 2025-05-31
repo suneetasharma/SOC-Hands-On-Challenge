@@ -1,4 +1,4 @@
-# 🛡️ Day 01 – [Lab Title Placeholder]
+# 🛡️ Day 05 – [Lab Title Placeholder]
 
 ## 📌 Objective
 > Describe the goal of the lab (e.g., detect suspicious login events, analyze PCAP traffic
@@ -19,7 +19,7 @@
 
 ## 📸 Screenshot
 <p align="center">
-  <img src="../../Screenshots/Day01.png" alt="Screenshot Placeholder" width="600">
+  <img src="../../Screenshots/Day05.png" alt="Screenshot Placeholder" width="600">
 </p>
 
 ---
