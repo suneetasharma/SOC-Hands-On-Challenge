@@ -35,6 +35,7 @@ Checked status and enabled if inactive:
 
 
 2. ✅ Step 2: Simulated Network Access Attempts
+
   - Used nmap and browser-based tools from another system or host
 
   - Simulated access to blocked ports (e.g., 21, 23, 3389)
@@ -44,6 +45,7 @@ Checked status and enabled if inactive:
 ✅ Step 3: Analyzed UFW Log File
 
 -  Viewed blocked attempts:
+
   - sudo tail -f /var/log/ufw.log
 
 - Filtered logs by "BLOCK":
@@ -64,9 +66,7 @@ Checked status and enabled if inactive:
 ---
 
 ## 📸 Screenshot
-<p align="center">
-  <img src="../../Screenshots/Day04-UFW-Denied.png" alt="Screenshot Placeholder" width="600">
-</p>
+<p align="center"> <img src="../../Screenshots/Day04-UFW-Denied.png" alt="UFW Blocked Log Screenshot" width="600"> </p>
 
 ---
 
