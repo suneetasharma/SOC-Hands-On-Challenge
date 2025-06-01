@@ -22,16 +22,16 @@ Analyze Linux UFW (Uncomplicated Firewall) logs to detect unauthorized access at
 
 Checked status and enabled if inactive:
 ```bash
-sudo ufw status
-sudo ufw enable
+  - sudo ufw status
+  - sudo ufw enable
 
-Allowed SSH only:
+- Allowed SSH only:
 ```bash
-sudo ufw allow ssh
+  - sudo ufw allow ssh
 
-Denied all other inbound traffic
+- Denied all other inbound traffic
 ```bash
-sudo ufw default deny incoming
+  - sudo ufw default deny incoming
 
 
 2. ✅ Step 2: Simulated Network Access Attempts
@@ -44,11 +44,11 @@ sudo ufw default deny incoming
 ✅ Step 3: Analyzed UFW Log File
   - Viewed blocked attempts:
 ```bash
-sudo tail -f /var/log/ufw.log
+- sudo tail -f /var/log/ufw.log
 
   - Filtered logs by "BLOCK":
 ```bash
-grep "BLOCK" /var/log/ufw.log
+  - grep "BLOCK" /var/log/ufw.log
 
 
 - Captured fields like:
@@ -57,7 +57,7 @@ grep "BLOCK" /var/log/ufw.log
 
   - DST – Destination IP
 
-   - PROTO – Protocol
+  - PROTO – Protocol
 
   - SPT/DPT – Source/Destination port
 
@@ -80,4 +80,4 @@ grep "BLOCK" /var/log/ufw.log
 ---
 
 ## 🎯 Conclusion
-Firewall log monitoring is essential for identifying low-level reconnaissance and intrusion attempts. UFW provides accessible, log-rich alerts that serve as an early detection layer in SOC investigations.
+- Firewall log monitoring is essential for identifying low-level reconnaissance and intrusion attempts. UFW provides accessible, log-rich alerts that serve as an early detection layer in SOC investigations.
