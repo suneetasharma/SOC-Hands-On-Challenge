@@ -42,12 +42,12 @@ Checked status and enabled if inactive:
   - Generated multiple UFW log entries
 
 ✅ Step 3: Analyzed UFW Log File
-  - Viewed blocked attempts:
-```bash
-- sudo tail -f /var/log/ufw.log
 
-  - Filtered logs by "BLOCK":
-```bash
+-  Viewed blocked attempts:
+  - sudo tail -f /var/log/ufw.log
+
+- Filtered logs by "BLOCK":
+
   - grep "BLOCK" /var/log/ufw.log
 
 
@@ -65,7 +65,7 @@ Checked status and enabled if inactive:
 
 ## 📸 Screenshot
 <p align="center">
-  <img src="../../Screenshots/Day05_LogAnalysis_LinuxAuthLogs-SSH Brute Force Attack.png" alt="Screenshot Placeholder" width="600">
+  <img src="../../Screenshots/Day04-UFW-Denied.png" alt="Screenshot Placeholder" width="600">
 </p>
 
 ---
