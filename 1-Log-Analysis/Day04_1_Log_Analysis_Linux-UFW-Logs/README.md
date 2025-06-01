@@ -1,34 +1,83 @@
-# 🛡️ Day 05 – [Lab Title Placeholder]
+# Day 04 – Linux Log Analysis: Network-Based Detection Using UFW Firewall Logs
 
 ## 📌 Objective
-> Describe the goal of the lab (e.g., detect suspicious login events, analyze PCAP traffic
+
+Analyze Linux UFW (Uncomplicated Firewall) logs to detect unauthorized access attempts and blocked connections. Understand how log entries indicate firewall behavior, source IPs, and potential brute-force or scanning activity.
 
 ---
 
 ## 🛠️ Tools Used
-- Tool 1
-- Tool 2
+
+- Ubuntu 20.04 LTS (VM)
+- UFW (Uncomplicated Firewall)
+- `/var/log/ufw.log`
+- `grep`, `tail`, `less`, `awk`
+- MITRE ATT&CK: [T1046 – Network Service Scanning](https://attack.mitre.org/techniques/T1046/)
 
 ---
 
 ## 🧪 Steps Performed
-1. Step one
-2. Step two
+
+### ✅ Step 1: Verified and Enabled UFW
+
+Checked status and enabled if inactive:
+```bash
+sudo ufw status
+sudo ufw enable
+
+Allowed SSH only:
+```bash
+sudo ufw allow ssh
+
+Denied all other inbound traffic
+```bash
+sudo ufw default deny incoming
+
+
+2. ✅ Step 2: Simulated Network Access Attempts
+  - Used nmap and browser-based tools from another system or host
+
+  - Simulated access to blocked ports (e.g., 21, 23, 3389)
+
+  - Generated multiple UFW log entries
+
+✅ Step 3: Analyzed UFW Log File
+  - Viewed blocked attempts:
+```bash
+sudo tail -f /var/log/ufw.log
+
+  - Filtered logs by "BLOCK":
+```bash
+grep "BLOCK" /var/log/ufw.log
+
+
+- Captured fields like:
+
+  - SRC – Source IP address
+
+  - DST – Destination IP
+
+   - PROTO – Protocol
+
+  - SPT/DPT – Source/Destination port
 
 ---
 
 ## 📸 Screenshot
 <p align="center">
-  <img src="../../Screenshots/Day05.png" alt="Screenshot Placeholder" width="600">
+  <img src="../../Screenshots/Day05_LogAnalysis_LinuxAuthLogs-SSH Brute Force Attack.png" alt="Screenshot Placeholder" width="600">
 </p>
 
 ---
 
 ## 🧠 Key Learnings
-- What did you discover?
-- How does this relate to MITRE ATT
+- UFW logs provide visibility into network denial events
+
+- BLOCK IN entries help identify unauthorized scans or brute-force attempts
+
+- Combining firewall logs with threat intel (e.g., AbuseIPDB) enhances incident context
 
 ---
 
 ## 🎯 Conclusion
-Summary of the lab outcome and why it matters to a SOC Analyst.
+Firewall log monitoring is essential for identifying low-level reconnaissance and intrusion attempts. UFW provides accessible, log-rich alerts that serve as an early detection layer in SOC investigations.
