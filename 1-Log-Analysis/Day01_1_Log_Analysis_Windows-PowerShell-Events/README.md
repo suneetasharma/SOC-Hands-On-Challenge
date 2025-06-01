@@ -87,7 +87,7 @@ This command lists all local user accounts on the system, whcih could be used by
   4. Review the log showing the execution of the `Get-LocalUser` command
 
 📸 <p align="center">
-  <img src="../Screenshots/Day01-EventID4104_v2.png" alt="PowerShell Screenshot" width="600">
+  <img src="SOC-Hands-On-Challenge/Screenshots/Day01-EventID4104_v2.png" alt="PowerShell Screenshot" width="600">
 </p>
 
 
