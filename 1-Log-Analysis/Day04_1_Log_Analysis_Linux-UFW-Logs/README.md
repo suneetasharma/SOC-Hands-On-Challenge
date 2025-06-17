@@ -67,7 +67,7 @@ Checked status and enabled if inactive:
 
 ## 📸 Screenshot
 <p align="center"> 
-<img src="../../Screenshots/Day04-UFW-Denied.png" alt="UFW Blocked Log Screenshot" width="600"> 
+<img src="../../Screenshots/Day04-UFW_Denied.png" alt="UFW Blocked Log Screenshot" width="600"> 
 </p>
 
 ---
