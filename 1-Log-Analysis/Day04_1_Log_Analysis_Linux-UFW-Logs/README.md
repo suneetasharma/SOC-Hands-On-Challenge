@@ -65,9 +65,9 @@ Checked status and enabled if inactive:
 
 ---
 
-## 📸 Screenshot
+## 📸 Test Embed
 <p align="center"> 
-<img src="https://raw.githubusercontent.com/suneetasharma/SOC-Hands-On-Challenge/main/Screenshots/Day04-UFW-Denied_v2.png" alt="UFW Blocked Log Screenshot" width="600"> 
+<img src="https://raw.githubusercontent.com/suneetasharma/SOC-Hands-On-Challenge/main/Screenshots/Day04-UFW-Denied_v2.png" alt="UFW Blocked Log Screenshot" width="400" /> 
 </p>
 
 ---
