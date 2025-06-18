@@ -1,0 +1,14 @@
+# Auto-convert all text files to use LF
+* text=auto eol=lf
+
+# Explicitly set for common file types
+*.md text eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.txt text eol=lf
+
+# Binary files - don't change line endings
+*.png binary
+*.jpg binary
+*.gif binary
