@@ -65,10 +65,19 @@ Checked status and enabled if inactive:
 
 ---
 
+## 📸 Screenshot/
 ## 📸 Screenshot
-<p align="center"> 
-<img src="https://raw.githubusercontent.com/suneetasharma/SOC-Hands-On-Challenge/main/Screenshots/Day04-UFW-Denied_Compressed.png" alt="UFW Screenshot" width="600" />
-</p>
+
+![UFW Screenshot](https://raw.githubusercontent.com/suneetasharma/SOC-Hands-On-Challenge/main/Screenshots/Day04-UFW-Denied_Compressed.png)
+#<p align="center"> 
+#<img src="https://raw.githubusercontent.com/suneetasharma/SOC-Hands-On-Challenge/main/Screenshots/#Day04-UFW-Denied_Compressed.png" alt="UFW Screenshot" width="600" />
+#</p>
+
+## Screenshot
+#<div align="center">
+#  <img src="https://raw.githubusercontent.com/suneetasharma/SOC-Hands-On-Challenge/main/Screenshots/#Day04-UFW-Denied_Compressed.png" alt="UFW Screenshot" width="600">
+#</div>
+
 
 ---
 
