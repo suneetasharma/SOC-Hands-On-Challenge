@@ -65,9 +65,11 @@ Checked status and enabled if inactive:
 
 ---
 
-## 📸 Screenshot/
+<h2 align="center">📸 Screenshot</h2>
 
-![UFW Screenshot](https://raw.githubusercontent.com/suneetasharma/SOC-Hands-On-Challenge/main/Screenshots/Day04-UFW-Denied_Compressed.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/suneetasharma/SOC-Hands-On-Challenge/main/Screenshots/Day04-UFW-Denied_Compressed.png" alt="UFW Screenshot" width="600">
+</p>
 
 ---
 
