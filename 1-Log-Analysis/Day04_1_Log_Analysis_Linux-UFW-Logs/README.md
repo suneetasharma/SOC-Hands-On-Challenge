@@ -57,10 +57,13 @@ sudo grep 'UFW BLOCK' /var/log/syslog
 - These logs can be ingested into SIEM platforms like Wazuh, Splunk, or ELK for real-time alerting.
 
 
-Conclusion
-In this lab, I learned how to simulate a denied connection using UFW, locate its log entry, and interpret log fields.
+✅ Conclusion
+✅ Enabled and configured UFW logging on a Linux system
 
-This hands-on exercise highlights the importance of Linux logs in SOC operations.
+✅ Simulated a denied inbound connection using port 8080
 
-UFW logging is a lightweight and valuable source of network-level threat data in home labs and production environments alike.
+✅ Identified and analyzed the UFW log entry in /var/log/syslog
 
+✅ Interpreted critical fields like SRC, DPT, and PROTO for threat context
+
+✅ Understood the importance of UFW logs in SOC environments for identifying unauthorized access attempts
