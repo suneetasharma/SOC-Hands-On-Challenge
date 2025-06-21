@@ -1,7 +1,7 @@
-# 🛡️ Day 7 – [Lab Title Placeholder]
+# 🛡️ Day 7 – ICMP Protocol Analysis
 
 ## 📌 Objective
-> The object of this lab is to understand and analyze ICMP (Internet Control Message Protocol) packets using Wireshark, which primarily consists of ping messages used for troubleshooting and identify ICMP Echo Requests and Echo Replies, interpret ICMP packet fields and apply relevant filters for investigation network connectivity. 
+The object of this lab is to understand and analyze ICMP (Internet Control Message Protocol) packets using Wireshark, which primarily consists of ping messages used for troubleshooting and identify ICMP Echo Requests and Echo Replies, interpret ICMP packet fields and apply relevant filters for investigation network connectivity. 
 
 ---
 
