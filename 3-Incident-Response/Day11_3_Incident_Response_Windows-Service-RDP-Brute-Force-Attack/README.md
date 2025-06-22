@@ -20,10 +20,11 @@ This lab helped me understand the fundamentals of incident response and practice
 | 4. Post-Incident Activity        | Document findings, report lessons learned, and update response strategies       |
 
 ---
+```
+<details>
+<summary> 💥 Common Windows Security Incidents</summary>
 
-## 💥 Common Windows Security Incidents
-
-| **Incident Type**                    | **Description**                                                              |
+| **Incident Type**        | **Description**                                                        |
 |-------------------------------------|------------------------------------------------------------------------------|
 | Unauthorized Login Attempts         | Repeated or brute-force RDP/local logins                                     |
 | PowerShell-Based Attacks            | Obfuscated/encoded PowerShell commands for exploitation                      |
@@ -32,6 +33,9 @@ This lab helped me understand the fundamentals of incident response and practice
 | Lateral Movement                    | Accessing internal machines via WMI, RDP, or SMB                              |
 
 ---
+</details>
+```
+-----
 
 ## 🧪 Lab Task – Simulate and Detect RDP Brute Force
 
@@ -45,7 +49,8 @@ This lab helped me understand the fundamentals of incident response and practice
 2. Allow **Remote Desktop** through Firewall.
 3. Create a test user:
    ```powershell
-   net user attackerlab Password123 /add
+   net user attackerlab Password123 /add 
+   ```
 4. Open Event Viewer and filter for Event ID **4625**
 
 🚨 Attack Simulation (on Kali Linux)
@@ -54,9 +59,10 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 ```
 
 - Monitor resulting login failures on Windows
-## 📸 Screenshot
+
+## 📸 Screenshot - Attack Simulation from Kali
 <p align="center">
-  <img src="../../Screenshots/Day11-Incident-Response_Attack-Simulation-from-Kali-Linux.png" alt="Screenshot Placeholder" width="400">
+  <img src="../../Screenshots/Day11-Incident-Response_Attack-Simulation-from-Kali-Linux.png" alt="Screenshot Placeholder" width="500">
 </p>
 
 
@@ -66,34 +72,40 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 - Event ID: 4625
 - Source IP: 192.168.70.5 of Kali Attacker
 
-## 📸 Screenshot
+## 📸 Screenshot - Detection via Event Viewer
 <p align="center">
-  <img src="../../Screenshots/Day11-Incident-Response_Detection-via-Event-Viewer.png" alt="Screenshot Placeholder" width="400">
+  <img src="../../Screenshots/Day11-Incident-Response_Detection-via-Event-Viewer.png" alt="Screenshot Placeholder" width="500">
 </p>
 
 ---
 
 🛡️ Response Steps
 1. Correlate Events: Multiple 4625 failures from one IP
+
 2. Block Attacker IP:
-``` New-NetFirewallRule -DisplayName "Block Attacker" -Direction Inbound -RemoteAddress <Kali_IP> -Action Block ```
+
+``` powershell
+ New-NetFirewallRule -DisplayName "Block Attacker" -Direction Inbound -RemoteAddress <192.168.70.5 > - Action Block ```
+
 3. Validate Rule via Windows Firewall and re-run Hydra
+
 4. Check Logs to confirm traffic is dropped
 
-## 📸 Screenshot
+## 📸 Screenshot - Firewall Rules (Windows Server), Blocked rule confirmation (on Kali-Linux), MS Windows Firewall logs
+
 <p align="center">
-  <img src="../../Screenshots/Day11-Incident Response_Response-Steps-FW-rules_Drop-Logs.png" alt="Screenshot Placeholder" width="400">
+  <img src="../../Screenshots/Day11-Incident Response_Response-Steps-FW-rules_Drop-Logs.png" alt="Screenshot Placeholder" width="500">
 </p>
 
-
+```markdown
 ## 🧠 Key Learnings
 ✅ This lab reinforced the following concepts:
 
-- Simulating an RDP brute-force attack using Hydra
-- Detecting login failures through Windows Event Viewer
-- Blocking malicious IPs with Windows Firewall
-- Applying core steps of the incident response lifecycle
-
+- [x] Simulating an RDP brute-force attack using Hydra
+- [x] Detecting login failures through Windows Event Viewer
+- [x] Blocking malicious IPs with Windows Firewall
+- [x] Applying core steps of the incident response lifecycle
+```
 ---
 
 📁 Evidence Collected
