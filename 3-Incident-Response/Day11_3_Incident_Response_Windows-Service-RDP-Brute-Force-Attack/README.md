@@ -23,11 +23,12 @@ This lab helped me understand the fundamentals of incident response and practice
 
 ## 🔄 Incident Response Lifecycle (NIST SP 800-61 Rev. 2)
 
-| **Phase**                 | **Description**          
-| 1. Preparation   | Define policies, train teams, and configure monitoring/logging tools |
-| 2. Detection and Analysis  Identify incidents using logs, alerts, and behavioral analysis |
+| **Phase**                         | **Description**                 |
+|----------------------------------|----------------------------------------------|
+| 1. Preparation     | Define policies, train teams, and configure monitoring/logging tools  |
+| 2. Detection and Analysis   | Identify incidents using logs, alerts, and behavioral analysis |
 | 3. Containment, Eradication, Recovery | Isolate systems, remove threats, and restore normal operations |
-| 4. Post-Incident Activity | Document findings, report lessons learned, and update response strategies |
+| 4. Post-Incident Activity  | Document findings, report lessons learned, and update response strategies  |
 
 ---
 
@@ -42,6 +43,7 @@ This lab helped me understand the fundamentals of incident response and practice
 | Credential Dumping   | Use of tools like Mimikatz to extract credentials                 |
 | Lateral Movement     | Internal system access via WMI, RDP, or SMB                       |
 </details>
+
 -----
 
 ## 🧪 Lab Task – Simulate and Detect RDP Brute Force
@@ -63,7 +65,9 @@ This lab helped me understand the fundamentals of incident response and practice
 
 4. Open Event Viewer and filter for Event ID **4625**
 
+
 ###🚨 Attack Simulation (on Kali Linux)
+
 ```
 sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://192.168.70.8
 ```
@@ -76,7 +80,7 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 </p>
 <p align="center"><em>Hydra running against Windows Server on port 3389</em></p>
 
-👁️ Detection via Event Viewer
+### 👁️ Detection via Event Viewer
 - Logon Type: 10 (RDP/RemoteInteractive)
 - Failure Reason: Unknown username or bad password
 - Event ID: 4625
@@ -89,7 +93,7 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 <p align="center"><em>Detection via Event Viewer</em></p>
 ---
 
-🛡️ Response Steps
+###🛡️ Response Steps
 1. Correlate Events: Multiple 4625 failures from one IP
 
 2. Block Attacker IP:
@@ -102,14 +106,15 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 
 4. Check Logs to confirm traffic is dropped
 
-## 📸 Screenshot - Firewall Rules (Windows Server), Blocked rule confirmation (on Kali-Linux), MS Windows Firewall logs
+##📸 Screenshot - Firewall Rules (Windows Server), Blocked rule confirmation (on Kali-Linux), MS Windows Firewall logs
 
 <p align="center">
   <img src="../../Screenshots/Day11-Incident Response_Response-Steps-FW-rules_Drop-Logs.png" alt="Screenshot Placeholder" width="500">
 </p>
 <p align="center"><em>FW Rules (Windows Server), Blocked Rule confirmation, MS Windows FW logs</em></p>
 
-```markdown
+
+
 ## 🧠 Key Learnings
 ✅ This lab reinforced the following concepts:
 - Simulating an RDP brute-force attack using Hydra
@@ -119,7 +124,7 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 ```
 ---
 
-📁 Evidence Collected
+###📁 Evidence Collected
 - Hydra attack output from Kali
 - Event Viewer logs (Event ID 4625)
 - Firewall rule screenshot
