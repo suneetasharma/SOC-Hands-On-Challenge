@@ -9,12 +9,6 @@ The objective of this lab is to analyze HTTP (Hypertext Transfer Protocol) packe
 - Operating System: Windows 10/11 (or Linux/macOS)
 - Software: Wireshark (latest version)
 
----
-
-## 🧪 Steps Performed
-1. Capture HTTP traffic using Wireshark
-2. Refine HTTP traffic analysis filtering using http;   http.request.method == "GET" and http.request.uri  filters
-
 📘 HTTP Packet Structure and Fields
 HTTP is an application-layer protocol used for communication between clients (browsers) and web servers. It typically runs over TCP port 80.
 
@@ -41,8 +35,12 @@ HTTP is an application-layer protocol used for communication between clients (br
 | `http.set_cookie`              | Show cookies in HTTP responses     |
 | `ip.addr == 192.168.1.10`      | HTTP traffic to/from specific host |
 
-
 ---
+
+## 🧪 Steps Performed
+1. Capture HTTP traffic using Wireshark
+2. Refine HTTP traffic analysis filtering using http;   http.request.method == "GET" and http.request.uri  filters
+
 
 ## 📸 Screenshot
 <p align="center">
