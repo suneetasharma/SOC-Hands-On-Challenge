@@ -24,7 +24,7 @@ This lab helped me understand the fundamentals of incident response and practice
 <details>
 <summary>💥 Common Windows Security Incidents</summary>
 
-| **Incident Type**        | **Description**         |        
+|| Incident Type        || Description         ||        
 | Unauthorized Login Attempts  | Repeated or brute-force RDP/local logins   |
 | PowerShell-Based Attacks    | Obfuscated/encoded PowerShell commands for exploitation |
 | Malware or Ransomware Execution | Executable payloads causing system compromise or encryption |
