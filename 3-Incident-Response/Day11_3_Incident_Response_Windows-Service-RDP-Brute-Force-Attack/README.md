@@ -3,6 +3,17 @@
 ## 📌 Objective
 This lab helped me understand the fundamentals of incident response and practice real-world detection techniques using Windows Event Viewer. I simulated an RDP brute-force attack using Kali Linux and observed how these events are logged and mitigated on a Windows Server.
 
+## 🗂️ Table of Contents
+- [Objective](#-objective)
+- [What is Incident Response?](#-what-is-incident-response)
+- [Incident Response Lifecycle](#-incident-response-lifecycle-nist-sp-800-61-rev-2)
+- [Common Windows Security Incidents](#-common-windows-security-incidents)
+- [Lab Task](#-lab-task--simulate-and-detect-rdp-brute-force)
+- [Attack Simulation](#-attack-simulation-on-kali-linux)
+- [Detection via Event Viewer](#-detection-via-event-viewer)
+- [Response Steps](#-response-steps)
+- [Key Learnings](#-key-learnings)
+- [Evidence Collected](#evidence-collected)
 ---
 
 ## 🧠 What is Incident Response?
@@ -20,18 +31,17 @@ This lab helped me understand the fundamentals of incident response and practice
 
 ---
 
-```
 <details>
 <summary>💥 Common Windows Security Incidents</summary>
 
-|| Incident Type        || Description         ||        
-| Unauthorized Login Attempts  | Repeated or brute-force RDP/local logins   |
-| PowerShell-Based Attacks    | Obfuscated/encoded PowerShell commands for exploitation |
-| Malware or Ransomware Execution | Executable payloads causing system compromise or encryption |
-| Credential Dumping    | Use of tools like Mimikatz to extract credentials   |
-| Lateral Movement  | Accessing internal machines via WMI, RDP, or SMB  |
-</details> 
-```
+| **Incident Type**              | **Description**                          |
+|-------------------------------|--------------------------------------------------------------|
+| Unauthorized Login Attempts | Repeated or brute-force RDP/local logins   |
+| PowerShell-Based Attacks  | Obfuscated or encoded PowerShell commands for exploitation        |
+| Malware / Ransomware Execution| Executable payloads causing system compromise or encryption |
+| Credential Dumping   | Use of tools like Mimikatz to extract credentials                 |
+| Lateral Movement     | Internal system access via WMI, RDP, or SMB                       |
+</details>
 -----
 
 ## 🧪 Lab Task – Simulate and Detect RDP Brute Force
@@ -53,7 +63,7 @@ This lab helped me understand the fundamentals of incident response and practice
 
 4. Open Event Viewer and filter for Event ID **4625**
 
-🚨 Attack Simulation (on Kali Linux)
+###🚨 Attack Simulation (on Kali Linux)
 ```
 sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://192.168.70.8
 ```
@@ -64,7 +74,7 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 <p align="center">
   <img src="../../Screenshots/Day11-Incident-Response_Attack-Simulation-from-Kali-Linux.png" alt="Screenshot Placeholder" width="500">
 </p>
-
+<p align="center"><em>Hydra running against Windows Server on port 3389</em></p>
 
 👁️ Detection via Event Viewer
 - Logon Type: 10 (RDP/RemoteInteractive)
@@ -76,7 +86,7 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 <p align="center">
   <img src="../../Screenshots/Day11-Incident-Response_Detection-via-Event-Viewer.png" alt="Screenshot Placeholder" width="500">
 </p>
-
+<p align="center"><em>Detection via Event Viewer</em></p>
 ---
 
 🛡️ Response Steps
@@ -85,8 +95,8 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 2. Block Attacker IP:
 
 ```
- New-NetFirewallRule -DisplayName "Block Attacker" -Direction Inbound -RemoteAddress <192.168.70.5 > - Action Block 
- ```
+ New-NetFirewallRule -DisplayName "Block Attacker" -Direction Inbound -RemoteAddress 192.168.70.5 -Action Block
+```
 
 3. Validate Rule via Windows Firewall and re-run Hydra
 
@@ -97,11 +107,11 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 <p align="center">
   <img src="../../Screenshots/Day11-Incident Response_Response-Steps-FW-rules_Drop-Logs.png" alt="Screenshot Placeholder" width="500">
 </p>
+<p align="center"><em>FW Rules (Windows Server), Blocked Rule confirmation, MS Windows FW logs</em></p>
 
 ```markdown
 ## 🧠 Key Learnings
 ✅ This lab reinforced the following concepts:
-
 - Simulating an RDP brute-force attack using Hydra
 - Detecting login failures through Windows Event Viewer
 - Blocking malicious IPs with Windows Firewall
