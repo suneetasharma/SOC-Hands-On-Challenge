@@ -12,28 +12,25 @@ This lab helped me understand the fundamentals of incident response and practice
 
 ## 🔄 Incident Response Lifecycle (NIST SP 800-61 Rev. 2)
 
-| **Phase**                         | **Description**                                                                 |
-|----------------------------------|---------------------------------------------------------------------------------|
-| 1. Preparation                   | Define policies, train teams, and configure monitoring/logging tools            |
-| 2. Detection and Analysis        | Identify incidents using logs, alerts, and behavioral analysis                  |
-| 3. Containment, Eradication, Recovery | Isolate systems, remove threats, and restore normal operations           |
-| 4. Post-Incident Activity        | Document findings, report lessons learned, and update response strategies       |
+| **Phase**                 | **Description**          
+| 1. Preparation   | Define policies, train teams, and configure monitoring/logging tools |
+| 2. Detection and Analysis  Identify incidents using logs, alerts, and behavioral analysis |
+| 3. Containment, Eradication, Recovery | Isolate systems, remove threats, and restore normal operations |
+| 4. Post-Incident Activity | Document findings, report lessons learned, and update response strategies |
 
 ---
+
 ```
 <details>
-<summary> 💥 Common Windows Security Incidents</summary>
+<summary>💥 Common Windows Security Incidents</summary>
 
-| **Incident Type**        | **Description**                                                        |
-|-------------------------------------|------------------------------------------------------------------------------|
-| Unauthorized Login Attempts         | Repeated or brute-force RDP/local logins                                     |
-| PowerShell-Based Attacks            | Obfuscated/encoded PowerShell commands for exploitation                      |
-| Malware or Ransomware Execution     | Executable payloads causing system compromise or encryption                  |
-| Credential Dumping                  | Use of tools like Mimikatz to extract credentials                            |
-| Lateral Movement                    | Accessing internal machines via WMI, RDP, or SMB                              |
-
----
-</details>
+| **Incident Type**        | **Description**         |        
+| Unauthorized Login Attempts  | Repeated or brute-force RDP/local logins   |
+| PowerShell-Based Attacks    | Obfuscated/encoded PowerShell commands for exploitation |
+| Malware or Ransomware Execution | Executable payloads causing system compromise or encryption |
+| Credential Dumping    | Use of tools like Mimikatz to extract credentials   |
+| Lateral Movement  | Accessing internal machines via WMI, RDP, or SMB  |
+</details> 
 ```
 -----
 
@@ -46,11 +43,14 @@ This lab helped me understand the fundamentals of incident response and practice
 
 ### ✅ Preparation (on Windows Server)
 1. Enable **RDP** in System Properties.
+
 2. Allow **Remote Desktop** through Firewall.
+
 3. Create a test user:
    ```powershell
    net user attackerlab Password123 /add 
    ```
+
 4. Open Event Viewer and filter for Event ID **4625**
 
 🚨 Attack Simulation (on Kali Linux)
@@ -84,8 +84,9 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 
 2. Block Attacker IP:
 
-``` powershell
- New-NetFirewallRule -DisplayName "Block Attacker" -Direction Inbound -RemoteAddress <192.168.70.5 > - Action Block ```
+```
+ New-NetFirewallRule -DisplayName "Block Attacker" -Direction Inbound -RemoteAddress <192.168.70.5 > - Action Block 
+ ```
 
 3. Validate Rule via Windows Firewall and re-run Hydra
 
@@ -101,10 +102,10 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 ## 🧠 Key Learnings
 ✅ This lab reinforced the following concepts:
 
-- [x] Simulating an RDP brute-force attack using Hydra
-- [x] Detecting login failures through Windows Event Viewer
-- [x] Blocking malicious IPs with Windows Firewall
-- [x] Applying core steps of the incident response lifecycle
+- Simulating an RDP brute-force attack using Hydra
+- Detecting login failures through Windows Event Viewer
+- Blocking malicious IPs with Windows Firewall
+- Applying core steps of the incident response lifecycle
 ```
 ---
 
