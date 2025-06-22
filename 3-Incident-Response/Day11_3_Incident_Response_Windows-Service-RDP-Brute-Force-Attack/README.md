@@ -1,34 +1,102 @@
-# 🛡️ Day 11 – [Lab Title Placeholder]
+# 🛡️ Day 11 – Introduction to Incident Response - Windows RDP Brute Force Detection
 
 ## 📌 Objective
-> Describe the goal of the lab (e.g., detect suspicious login events, analyze PCAP traffic)
+This lab helped me understand the fundamentals of incident response and practice real-world detection techniques using Windows Event Viewer. I simulated an RDP brute-force attack using Kali Linux and observed how these events are logged and mitigated on a Windows Server.
 
 ---
 
-## 🛠️ Tools Used
-- Tool 1
-- Tool 2
+## 🧠 What is Incident Response?
+**Incident Response (IR)** is the structured process used by security teams to detect, contain, investigate, and recover from security threats. It helps ensure minimal damage and fast recovery after a security breach.
 
 ---
 
-## 🧪 Steps Performed
-1. Step one
-2. Step two
+## 🔄 Incident Response Lifecycle (NIST SP 800-61 Rev. 2)
+
+| **Phase**                         | **Description**                                                                 |
+|----------------------------------|---------------------------------------------------------------------------------|
+| 1. Preparation                   | Define policies, train teams, and configure monitoring/logging tools            |
+| 2. Detection and Analysis        | Identify incidents using logs, alerts, and behavioral analysis                  |
+| 3. Containment, Eradication, Recovery | Isolate systems, remove threats, and restore normal operations           |
+| 4. Post-Incident Activity        | Document findings, report lessons learned, and update response strategies       |
 
 ---
+
+## 💥 Common Windows Security Incidents
+
+| **Incident Type**                    | **Description**                                                              |
+|-------------------------------------|------------------------------------------------------------------------------|
+| Unauthorized Login Attempts         | Repeated or brute-force RDP/local logins                                     |
+| PowerShell-Based Attacks            | Obfuscated/encoded PowerShell commands for exploitation                      |
+| Malware or Ransomware Execution     | Executable payloads causing system compromise or encryption                  |
+| Credential Dumping                  | Use of tools like Mimikatz to extract credentials                            |
+| Lateral Movement                    | Accessing internal machines via WMI, RDP, or SMB                              |
+
+---
+
+## 🧪 Lab Task – Simulate and Detect RDP Brute Force
+
+### 🖥️ Lab Setup
+- **Target**: Windows Server 2022 (RDP Enabled) - [WIN2022SERVER - 192.168.70.8]
+- **Attacker**: Kali Linux with Hydra [ss-Kali - 192.168.70.5]
+- **Tools**: Event Viewer, Windows Firewall, Nmap
+
+### ✅ Preparation (on Windows Server)
+1. Enable **RDP** in System Properties.
+2. Allow **Remote Desktop** through Firewall.
+3. Create a test user:
+   ```powershell
+   net user attackerlab Password123 /add
+4. Open Event Viewer and filter for Event ID **4625**
+
+🚨 Attack Simulation (on Kali Linux)
+```
+sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://192.168.70.8
+```
+
+- Monitor resulting login failures on Windows
+## 📸 Screenshot
+<p align="center">
+  <img src="../../Screenshots/Day11-Incident-Response_Attack-Simulation-from-Kali-Linux.png" alt="Screenshot Placeholder" width="400">
+</p>
+
+
+👁️ Detection via Event Viewer
+- Logon Type: 10 (RDP/RemoteInteractive)
+- Failure Reason: Unknown username or bad password
+- Event ID: 4625
+- Source IP: 192.168.70.5 of Kali Attacker
 
 ## 📸 Screenshot
 <p align="center">
-  <img src="../../Screenshots/Day11.png" alt="Screenshot Placeholder" width="600">
+  <img src="../../Screenshots/Day11-Incident-Response_Detection-via-Event-Viewer.png" alt="Screenshot Placeholder" width="400">
 </p>
 
 ---
 
+🛡️ Response Steps
+1. Correlate Events: Multiple 4625 failures from one IP
+2. Block Attacker IP:
+``` New-NetFirewallRule -DisplayName "Block Attacker" -Direction Inbound -RemoteAddress <Kali_IP> -Action Block ```
+3. Validate Rule via Windows Firewall and re-run Hydra
+4. Check Logs to confirm traffic is dropped
+
+## 📸 Screenshot
+<p align="center">
+  <img src="../../Screenshots/Day11-Incident Response_Response-Steps-FW-rules_Drop-Logs.png" alt="Screenshot Placeholder" width="400">
+</p>
+
+
 ## 🧠 Key Learnings
-- What did you discover?
-- How does this relate to MITRE ATT&CK or real-world SOC tasks?
+✅ This lab reinforced the following concepts:
+
+- Simulating an RDP brute-force attack using Hydra
+- Detecting login failures through Windows Event Viewer
+- Blocking malicious IPs with Windows Firewall
+- Applying core steps of the incident response lifecycle
 
 ---
 
-## 🎯 Conclusion
-Summary of the lab outcome and why it matters to a SOC Analyst.
+📁 Evidence Collected
+- Hydra attack output from Kali
+- Event Viewer logs (Event ID 4625)
+- Firewall rule screenshot
