@@ -43,7 +43,7 @@ TLS (Transport Layer Security) is a cryptographic protocol that provides secure 
 
 ## 📸 Screenshot
 <p align="center">
-  <img src="../../Screenshots/Day10Day10-Wireshark-TLS-Show-All-Traffic_Client-Hello-Msg_TLS-1.2-traffic.png" alt="Screenshot Placeholder" width="600">
+  <img src="../../Screenshots/Day10-Wireshark-TLS-Show-All-Traffic_Client-Hello-Msg_TLS-1.2-traffic.png" alt="Screenshot Placeholder" width="600">
 </p>
 
 ---
