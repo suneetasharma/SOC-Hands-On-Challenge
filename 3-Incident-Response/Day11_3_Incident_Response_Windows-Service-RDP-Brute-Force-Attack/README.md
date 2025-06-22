@@ -14,6 +14,7 @@ This lab helped me understand the fundamentals of incident response and practice
 - [Response Steps](#-response-steps)
 - [Key Learnings](#-key-learnings)
 - [Evidence Collected](#evidence-collected)
+
 ---
 
 ## 🧠 What is Incident Response?
@@ -65,16 +66,15 @@ This lab helped me understand the fundamentals of incident response and practice
 
 4. Open Event Viewer and filter for Event ID **4625**
 
-
-###🚨 Attack Simulation (on Kali Linux)
+###🚨Attack Simulation (on Kali Linux)
 
 ```
 sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://192.168.70.8
 ```
 
-- Monitor resulting login failures on Windows
+5. Monitor resulting login failures on Windows
 
-## 📸 Screenshot - Attack Simulation from Kali
+##📸Screenshot - Attack Simulation from Kali
 <p align="center">
   <img src="../../Screenshots/Day11-Incident-Response_Attack-Simulation-from-Kali-Linux.png" alt="Screenshot Placeholder" width="500">
 </p>
@@ -86,14 +86,16 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 - Event ID: 4625
 - Source IP: 192.168.70.5 of Kali Attacker
 
-## 📸 Screenshot - Detection via Event Viewer
+##📸Screenshot - Detection via Event Viewer
 <p align="center">
   <img src="../../Screenshots/Day11-Incident-Response_Detection-via-Event-Viewer.png" alt="Screenshot Placeholder" width="500">
 </p>
 <p align="center"><em>Detection via Event Viewer</em></p>
+
 ---
 
-###🛡️ Response Steps
+
+###🛡️Response Steps
 1. Correlate Events: Multiple 4625 failures from one IP
 
 2. Block Attacker IP:
@@ -106,14 +108,15 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 
 4. Check Logs to confirm traffic is dropped
 
-##📸 Screenshot - Firewall Rules (Windows Server), Blocked rule confirmation (on Kali-Linux), MS Windows Firewall logs
+
+##📸Screenshot - Firewall Rules (Windows Server), Blocked rule confirmation (on Kali-Linux), MS Windows Firewall logs
 
 <p align="center">
   <img src="../../Screenshots/Day11-Incident Response_Response-Steps-FW-rules_Drop-Logs.png" alt="Screenshot Placeholder" width="500">
 </p>
 <p align="center"><em>FW Rules (Windows Server), Blocked Rule confirmation, MS Windows FW logs</em></p>
 
-
+---
 
 ## 🧠 Key Learnings
 ✅ This lab reinforced the following concepts:
@@ -121,7 +124,7 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 - Detecting login failures through Windows Event Viewer
 - Blocking malicious IPs with Windows Firewall
 - Applying core steps of the incident response lifecycle
-```
+
 ---
 
 ###📁 Evidence Collected
