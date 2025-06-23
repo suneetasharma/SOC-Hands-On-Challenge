@@ -32,8 +32,6 @@ Learn how to detect and respond to brute-force attacks against a Windows system 
 
 ---
 
-
-
 <details>
 <summary>💥 Common Windows Security Incidents</summary>
 
@@ -89,7 +87,7 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 
 5. Monitor resulting login failures on Windows
 
-## 📸Screenshot - Attack Simulation from Kali
+# 📸 Screenshot - Attack Simulation from Kali
 
 <p align="center">
   <img src="../../Screenshots/Day11-Incident-Response_Attack-Simulation-from-Kali-Linux.png" alt="Screenshot Placeholder" width="500">
@@ -104,7 +102,8 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 - Failure Reason: Unknown username or bad password
 - Caller IP: 192.168.70.5 (IP of Kali Attacker)
 
-##📸Screenshot - Detection via Event Viewer
+
+# 📸 Screenshot - Detection via Event Viewer
 <p align="center">
   <img src="../../Screenshots/Day11-Incident-Response_Detection-via-Event-Viewer.png" width="500">
 </p>
@@ -126,7 +125,7 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 
 4. Check Logs to confirm traffic is dropped
 
-##📸Screenshot - Firewall Rules (Windows Server), Blocked rule confirmation (on Kali-Linux), MS Windows Firewall logs
+# 📸 Screenshot - Firewall Rules (Windows Server), Blocked rule confirmation (on Kali-Linux), MS Windows Firewall logs
 
 <p align="center">
   <img src="../../Screenshots/Day11-Incident Response_Response-Steps-FW-rules_Drop-Logs.png" alt="Screenshot Placeholder" width="500">
