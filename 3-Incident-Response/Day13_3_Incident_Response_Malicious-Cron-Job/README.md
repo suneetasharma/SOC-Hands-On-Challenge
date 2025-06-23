@@ -93,7 +93,7 @@ cat /tmp/malicious.sh
 
 ### 📸 Screenshot
 <p align="center">
-  <img src="../../Screenshots/Day-13-Incident-Response_Investigation_Detection-and-Analysis13.png" width="400">
+  <img src="../../Screenshots/Day-13-Incident-Response_Investigation_Detection-and-Analysis.png" width="400">
 </p> <p align="center"><em>Detection and Analysis</em></p>
 
 
