@@ -70,23 +70,26 @@ chmod +x fakebackup.sh
 
 ## 🧪 Steps-by-Steps Investigation
 
-1. Preparation
+🔧 Preparation
 
-- Install curl, lsof, ps, and grep (usually pre-installed). 
+- Ensure the following tools are installed (usually pre-installed):
+  ```
+   curl, lsof, ps, grep 
+  ```
 
-2. Detection and Analysis
+🔍 Detection and Analysis
 
-- Check running processes:
+- Check running processes for suspicious activity:
 ```
 ps aux | grep fakebackup.sh
 ```
 
-- Search for suspicious files
+- Search for suspicious scripts in /tmp:
 ```
 find /tmp -name "*.sh"
 ```
 
-3. Containment, Eradication, and Recovery
+🔒 Containment, Eradication, and Recovery
 
 - kill any related processes:
 ```
@@ -98,14 +101,14 @@ pkill curl
 rm -f /tmp/payload.sh
 ```
 
-- Clear the crontab if persistence was found:
+- Clear any suspicious crontab entries:
 ```
 crontab -e
 ```
 
 - Restart services if needed and log out inactive sessions.
 
-4. Post-Incident Activity
+📘 Post-Incident Activity
 
 - 📝 Document all investigation steps, findings, and response actions
 - 📤 Export relevant logs and process data as evidence
