@@ -6,7 +6,7 @@ Learn how to detect and respond to brute-force attacks against a Windows system 
 ## 🗂️ Table of Contents
 - [What is Incident Response?](#what-is-incident-response)
 - [Incident Response Lifecycle (NIST)](#incident-response-lifecycle-nist)
-- [💥 Common Windows Security Incidents](#common-windows-security-incidents)
+- [Common Windows Security Incidents](#common-windows-security-incidents)
 - [🧪 Lab Task: Simulate and Detect RDP Brute Force](#lab-task-simulate-and-detect-rdp-brute-force)
 - [🚨 Attack Simulation (on Kali Linux)](#attack-simulation-on-kali-linux)
 - [👁️ Detection via Event Viewer](#detection-via-event-viewer)
@@ -87,7 +87,7 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 
 5. Monitor resulting login failures on Windows
 
-# 📸 Screenshot - Attack Simulation from Kali
+### 📸 Screenshot - Attack Simulation from Kali
 
 <p align="center">
   <img src="../../Screenshots/Day11-Incident-Response_Attack-Simulation-from-Kali-Linux.png" alt="Screenshot Placeholder" width="500">
@@ -103,7 +103,7 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 - Caller IP: 192.168.70.5 (IP of Kali Attacker)
 
 
-# 📸 Screenshot - Detection via Event Viewer
+### 📸 Screenshot - Detection via Event Viewer
 <p align="center">
   <img src="../../Screenshots/Day11-Incident-Response_Detection-via-Event-Viewer.png" width="500">
 </p>
@@ -117,7 +117,7 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 1. Correlate Events: Multiple 4625 failures from one IP
 
 2. Block Attacker IP:
-```
+```powershell
  New-NetFirewallRule -DisplayName "Block Attacker" -Direction Inbound -RemoteAddress 192.168.70.5 -Action Block
 ```
 
@@ -125,10 +125,10 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 
 4. Check Logs to confirm traffic is dropped
 
-# 📸 Screenshot - Firewall Rules (Windows Server), Blocked rule confirmation (on Kali-Linux), MS Windows Firewall logs
+### 📸 Screenshot - Firewall Rules (Windows Server), Blocked rule confirmation (on Kali-Linux), MS Windows Firewall logs
 
 <p align="center">
-  <img src="../../Screenshots/Day11-Incident Response_Response-Steps-FW-rules_Drop-Logs.png" alt="Screenshot Placeholder" width="500">
+  <img src="../../Screenshots/Day11-Incident-Response_Response-Steps-FW-rules_Drop-Logs.png" alt="Screenshot Placeholder" width="500">
 </p>
 <p align="center"><em>Firewall Rule created to block attacker IP</em></p>
 
@@ -136,20 +136,14 @@ sudo hydra -t 4 -V -f -l attackerlab -P /usr/share/wordlists/rockyou.txt rdp://1
 
 ## 🧠 Key Learnings
 - ✅ Simulated a brute-force RDP attack using Hydra
-
 - ✅ Monitored and filtered login failures via Event Viewer (Event ID 4625)
-
 - ✅ Used New-NetFirewallRule to block the attacker's IP
-
 - ✅ Understood the importance of correlation and containment in IR
-
 - ✅ Practiced core steps from NIST's Incident Response Framework
 
 ---
 
 ### 📁 Evidence Collected
 - ✔️ Hydra output from Kali Linux
-
 - ✔️ Event Viewer screenshots showing repeated failures
-
 - ✔️ Firewall rule screenshot confirming IP block
