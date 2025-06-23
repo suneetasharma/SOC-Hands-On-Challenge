@@ -3,6 +3,18 @@
 ## 📌 Objective
 Understand the core steps of incident response by investigating a suspicious bash script execution on a Linux system and learn how to detect, analyze, and respond to a basic script-based intrusion.
 
+## 🗂️ Table of Contents
+- [Objective](#-objective)
+- [What is Incident Response?](#what-is-incident-response)
+- [Incident Response Process](#incident-response-process-nist-sp-800-61-rev-2)
+- [Lab Task](#lab-task-suspicious-script-found-in-tmp)
+- [Lab Setup](#️-lab-setup)
+- [Investigation Steps](#️-steps-by-steps-investigation)
+- [Screenshot](#-screenshot--bash-script-investigation)
+- [Key Learnings](#-key-learnings)
+- [Conclusion](#-conclusion)
+
+
 📘 What is Incident Response?
 **Incident Response (IR)** is the process of detecting and managing a cybersecurity incident to minimize impact and restore normal operations. This lab introduces a basic Linux scenario where an attacker’s script is executed through user error or misconfiguration.
 
@@ -22,7 +34,7 @@ Your monitoring system flagged a suspicious file in /tmp. Upon inspection, it's 
 
 
 ## 🛠️ Lab Setup 
-# System Requirements:
+### System Requirements:
 - Ubuntu 20.04/22.04 or Kali Linux
 - Terminal access with sudo privileges
 
@@ -76,7 +88,7 @@ find /tmp -name "*.sh"
 
 3. Containment, Eradication, and Recovery
 
-- kill any related processe:
+- kill any related processes:
 ```
 pkill curl
 ```
@@ -95,21 +107,27 @@ crontab -e
 
 4. Post-Incident Activity
 
+- 📝 Document all investigation steps, findings, and response actions
+- 📤 Export relevant logs and process data as evidence
+- 🔄 Conduct a “lessons learned” review with the team
+- 🛡️ Update detection rules (e.g., add alerts for /tmp script execution)
+- 📚 Recommend user or system hardening to prevent recurrence
+- 🧪 Add this scenario to tabletop or red-team training playbooks
 
 ---
 
-## 📸 Screenshot
+### 📸 Screenshot - Bash Script Investigation
 <p align="center">
   <img src="../../Screenshots/Day12-Incident-Response_Linux-Suspicious-Bash-Script.png"  width="400">
 </p>
-<p align="center"><em>Bash Attack Investigation</em></p>
----
+<p align="center"><em>Script identified and terminated in Linux environment</em></p>
+
 
 ## 🧠 Key Learnings
-✅ Simulate Script Create and execute a suspicious bash script attempting to connect to a malicious IP.
-✅ Investigate Logs Use commands to analyze the event
-✅ Kill and Delete Contain and remove the malicious file
-✅ Document Findings Note IPs, users, and recommendations
+- ✅ Simulated the creation and execution a suspicious bash script attempting to connect to a malicious IP.
+- ✅ Investigate Logs Use commands to analyze the event
+- ✅ Kill and Delete Contain and remove the malicious file
+- ✅ Document Findings Note IPs, users, and recommendations
 
 ---
 
