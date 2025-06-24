@@ -83,6 +83,7 @@ grep CRON /var/log/syslog
 │  │  └───────── Day of Month (1 - 31)
 │  └──────────── Hour (0 - 23)
 └──────────────── Minute (0 - 59)
+```
 </details>
 
 ---
