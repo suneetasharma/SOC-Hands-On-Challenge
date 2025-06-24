@@ -5,6 +5,23 @@ Investigate and respond to a suspicious outbound network connection from a Linux
 
 ---
 
+🗂️ Table of Contents
+- Objective
+- Why This Matters
+- Incident Response Process (NIST)
+- Lab Setup
+- Scenario
+- Investigation Steps
+   - Detect Suspicious Network Connection
+   - Analyze the Process
+   - Containment and Eradication
+   - Optional: Bonus Threat – Suspicious kupdate Script
+- Screenshots
+- Key Learnings
+- Conclusion
+- Pro Tip
+
+
 ## 📘 Why It Matters
 Attackers often use hidden outbound connections to communicate with command-and-control (C2) servers. Detecting and cutting off these connections is essential for SOC and IR teams.
 
@@ -13,12 +30,12 @@ Attackers often use hidden outbound connections to communicate with command-and-
 |--------------------|-----------------------------------------|
 | Preparation    | Ensure 'netstat', 'ss', and 'lsof' are installed. Enable auditd/network logging. |
 | Detection and Analysis | Identify unexpected remote connections and associated processes.    |
-| Containment, Eradication, Recovery | Kill the process, investigate binary, block destination IP     |
+| Containment, Eradication, Recovery | Kill the process, investigate binary, block destination IP  |
 | Post-Incident Activity | Document  findings, improve firewall rules, configure monitoring tools. |
 
-###⚠️ Scenario: Unexpected Outbound Connection Detected
-A Linux system shows an active connection to an unknown IP 45.13.220.98:443, not related to any known services.
 
+### ⚠️ Scenario: Unexpected Outbound Connection Detected
+A Linux system shows an active connection to an unknown IP 45.13.220.98:443, not related to any known services.
 
 
 ## 🛠️ Lab Setup 
@@ -103,21 +120,38 @@ ufw deny out to 45.13.220.98
 </p>
 <p align="center"><em>Incident Response to suspicious kupdate script</em></p>
 
-Recommendations:
-
-- Implement egress filtering
-- Deploy IDS/IPS solutions
-- Monitor outbound connections and unusual traffic
+## 🛡️ Defensive Recommendations
+- Implement egress filtering to restrict outbound traffic
+- Deploy IDS/IPS solutions to detect and block suspicious activity
+- Continuously monitor outbound connections and detect unusual traffic patterns
 
 ---
 
 ## 🧠 Key Learnings
-- Learned how Attackers often use outbound networks for data exfiltration and communication to C2 server connection by using nohup and save the output and error messages silently. 
-- Uses netstat to detect active connection to 45.13.220.98:443 and killed the process to contain it and blocked with UFW to erradicate the connection.
+- ✅ Simulated suspicious outbound connection using `nohup` and `curl`
+- ✅ Detected connection to unknown IP `45.13.220.98:443` using `netstat` and `ss`
+- ✅ Identified and killed the responsible process using `ps` and `grep`
+- ✅ Blocked outbound IP using `ufw` to prevent future connections
+- ✅ Investigated and removed a suspicious script (`kupdate`) simulating persistence
 
 ---
 
 ## 🎯 Conclusion
-- Analyze and investigated a suspicious outbound connection to identify the process and PID using ps, netstat. And killed the PID to contain or eradicate the suspicious connection.
-- Subsequently updated UFW rule to block any future outbound connection to the C2/IP address.
-- Also simulated suspicious script into the /usr/local/bin/kupdate and investigate, analyze, kill the process and remove binaries of kupdate as part of incident response procedure.  
+
+This lab demonstrated how to detect and investigate suspicious outbound network connections that may indicate C2 activity. I used `netstat`, `ps`, and `ss` to trace the responsible process, killed it, and blocked the destination IP using `ufw`. Additionally, I simulated and responded to a persistence mechanism (`/usr/local/bin/kupdate`) by analyzing and removing its process and binary. These actions reinforced containment and recovery strategies outlined in the NIST incident response lifecycle.
+
+---
+
+<details>
+<summary>💡 <strong>Pro Tip: Automate Suspicious IP Monitoring</strong></summary>
+
+- 🛡️ Use `auditd` or `Suricata` to detect suspicious outbound DNS or HTTP traffic  
+- 🔍 Schedule `lsof -i`, `ss -plant`, or `netstat` to log outbound activity  
+- 📊 Integrate UFW log monitoring into a SIEM (e.g., Wazuh, Splunk, ELK)  
+- 📌 Enrich suspicious IPs with threat intelligence sources like AbuseIPDB or VirusTotal  
+
+</details>
+
+---
+
+
