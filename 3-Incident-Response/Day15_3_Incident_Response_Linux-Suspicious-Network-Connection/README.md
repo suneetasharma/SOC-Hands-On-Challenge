@@ -32,11 +32,11 @@ Simulate Suspicious Connection
 ```
 nohup bash -c 'while true; do curl http://45.13.220.98/ping >/dev/null 2>&1; sleep 30; done' &
 ```
-### 📸 Screenshot – Bash Script Investigation
+### 📸 Screenshot – Simulate Suspicious Outbound Connection
 <p align="center">
-  <img src="../../Screenshots/Day12-Incident-Response_Linux-Suspicious-Bash-Script.png" width="500">
+  <img src="../../Screenshots/Day-15-Incident-Response_Simulate-Suspicious-Connection.png" width="500">
 </p>
-<p align="center"><em>Script identified and terminated in Linux environment</em></p>
+<p align="center"><em>Simulate Suspicious outbound connection</em></p>
 
 ## 🧪 Steps-by-Step Investigation
 
@@ -112,8 +112,8 @@ Recommendations:
 ---
 
 ## 🧠 Key Learnings
-- Learned how to perform suspicious outbound network connection by using nohup and save the output and error messages silently. 
-- Detecting it by using netstat investigate on it and perform the necessary Incident Response process.
+- Learned how Attackers often use outbound networks for data exfiltration and communication to C2 server connection by using nohup and save the output and error messages silently. 
+- Uses netstat to detect active connection to 45.13.220.98:443 and killed the process to contain it and blocked with UFW to erradicate the connection.
 
 ---
 
