@@ -178,6 +178,11 @@ Set-NetFirewallRule -DisplayName "Block Network Access" -Enabled False
 
 ---
 
+✅ Conclusion
+This lab reinforced each phase of the NIST Incident Response Lifecycle. During Preparation, PowerShell logging was enabled. In Detection and Analysis, suspicious use of Invoke-Expression was identified using Event ID 4104. Through Containment and Eradication, the system was isolated, and the malicious payload removed. Finally, in Post-Incident Activity, I reviewed artifacts, restored normal operations, and documented lessons learned. This hands-on experience emphasized the importance of continuous monitoring, PowerShell visibility, and structured response for endpoint threats.
+
+---
+
 ## ✨ Optional Enhancements
 <details>
 <summary>💡 <strong>📘Pro Tip: Prevent PowerShell Misuse</strong></summary>
