@@ -1,9 +1,20 @@
 # 🛡️ Day 16 – Install and Configure Splunk
 
 ## 📌 Objective
-The objective of this lab is to install and configure Splunk on an Ubuntu machine. and have Splunk up and running to collect and analyze security logs.
+Install and configure Splunk on an Ubuntu machine to collect and analyze security logs in a local SOC environment.
 
 ---
+
+## 🗂️ Table of Contents
+- [Objective](#objective)
+- [Lab Setup](#lab-setup)
+- [Steps to Install and Configure Splunk](#steps-to-install-and-configure-splunk-on-ubuntu)
+  - [Step 1: Download Splunk](#step-1-download-splunk)
+  - [Step 2: Enable Splunk as a Service](#step-2-enable-splunk-as-a-service)
+  - [Step 3: Access Splunk Web Interface](#step-3-access-splunk-web-interface)
+- [Key Learnings](#key-learnings)
+- [Conclusion](#conclusion)
+
 
 ## 🛠️ Lab Setup
 
@@ -32,7 +43,7 @@ wget -O splunk-9.3.0-51ccf43db5bd-linux-2.6-amd64.deb "https://download.splunk.c
 
 2. Install Splunk
 ``` 
-sudo dpkg -i splunk-ubuntu.deb
+sudo dpkg -i splunk-9.3.0-51ccf43db5bd-linux-2.6-amd64.deb
 ```
 
 ### 📸 Screenshot - Install Splunk
@@ -66,20 +77,23 @@ sudo ./splunk start
 4. When prompted, set up a admin username and password
 
 ### Step 3: Access Splunk Web Interface
-1. Splunk install above can ONLY be accessible locally from http://127.0.0.1:8000. and can only be access via browser of your Linux desktop. So, to allow any user access Splunk globally, you have to bind the IP address to 0.0.0.0 in /opt/splunk/etc/splunk-launch.conf file. And allow port 8000 on tcp 
-    - Blind IP address to 0.0.0.0 in splunk-launch.conf
+1. Splunk install above can ONLY be accessible locally from http://127.0.0.1:8000. and can only be access via browser of your Linux desktop. To make Splunk accessible from other machines on the network (instead of just localhost), you must update the bind IP and open the required port:
+
+    - Update Blind IP address in splunk-launch.conf
     ```
-    vi /opt/splunk/etc/splunk-launch.conf
+    sudo vi /opt/splunk/etc/splunk-launch.conf
+    # Add this line
     SPLUNK_BINDIP=0.0.0.0
     ```
-    - Allow port 8000 on tcp
+
+    - Allow port 8000 through the firewall
     ```
     sudo ufw allow 8000/tcp
     ```
     
-    - Open a web browser and go to:
+    - Then access Splunk at:
     ```
-    http://192.168.70.4:8080
+    http://<ubuntu-server-ip>:8000 or http://192.168.70.4:8000
     ``` 
 
 ### 📸 Screenshot - Access Splunk Web Interface
@@ -100,10 +114,13 @@ sudo ./splunk start
 ---
 
 ## 🧠 Key Learnings
-- Install and configure Splunk on an Ubuntu Linux server
+- ✅ Learned how to download and install `.deb` packages via terminal  
+- ✅ Enabled Splunk as a system service with auto-start  
+- ✅ Configured IP binding and firewall rules to allow remote access  
+- ✅ Accessed the Splunk Web UI and verified admin login  
 
 ---
 
 ## 🎯 Conclusion
-✅ Successfully installed Splunk on an Ubuntu machine.
-✅ Configured Splunk as a service and enabled auto-start.
+Successfully installed and configured Splunk Enterprise on an Ubuntu system. Enabled boot-time service and modified IP bindings and firewall settings to make the Splunk web interface accessible over the local network. This lab provides a foundational setup for future log ingestion, security monitoring, and SOC investigations.
+
