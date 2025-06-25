@@ -5,21 +5,18 @@ Investigate and respond to a suspicious outbound network connection from a Linux
 
 ---
 
-🗂️ Table of Contents
-- Objective
-- Why This Matters
-- Incident Response Process (NIST)
-- Lab Setup
-- Scenario
-- Investigation Steps
-   - Detect Suspicious Network Connection
-   - Analyze the Process
-   - Containment and Eradication
-   - Optional: Bonus Threat – Suspicious kupdate Script
-- Screenshots
-- Key Learnings
-- Conclusion
-- Pro Tip
+## 🗂️ Table of Contents
+- [Objective](#objective)
+- [Why This Matters](#why-this-matters)
+- [Incident Response Process (NIST)](#incident-response-process-nist)
+- [Lab Setup](#lab-setup)
+- [Scenario: Unexpected Outbound Connection Detected](#scenario-unexpected-outbound-connection-detected)
+- [Investigation Steps](#investigation-steps)
+- [Screenshots](#screenshots)
+- [Defensive Recommendations](#defensive-recommendations)
+- [Key Learnings](#key-learnings)
+- [Conclusion](#conclusion)
+
 
 
 ## 📘 Why It Matters
