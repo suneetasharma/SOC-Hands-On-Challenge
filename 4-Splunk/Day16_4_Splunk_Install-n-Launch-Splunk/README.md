@@ -77,13 +77,12 @@ sudo ./splunk start
 4. When prompted, set up a admin username and password
 
 ### Step 3: Access Splunk Web Interface
-1. Splunk install above can ONLY be accessible locally from http://127.0.0.1:8000. and can only be access via browser of your Linux desktop. To make Splunk accessible from other machines on the network (instead of just localhost), you must update the bind IP and open the required port:
+To make Splunk accessible from other machines on the network (instead of just localhost), you must update the bind IP and open the required port:
 
-    - Update Blind IP address in splunk-launch.conf
+    - Update Blind IP address in splunk-launch.conf 
     ```
     sudo vi /opt/splunk/etc/splunk-launch.conf
-    # Add this line
-    SPLUNK_BINDIP=0.0.0.0
+      SPLUNK_BINDIP=0.0.0.0
     ```
 
     - Allow port 8000 through the firewall
