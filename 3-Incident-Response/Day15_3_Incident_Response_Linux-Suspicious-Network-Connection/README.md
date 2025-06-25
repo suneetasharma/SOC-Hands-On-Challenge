@@ -19,10 +19,10 @@ Investigate and respond to a suspicious outbound network connection from a Linux
 
 
 
-## 📘 Why It Matters
+## Why It Matters
 Attackers often use hidden outbound connections to communicate with command-and-control (C2) servers. Detecting and cutting off these connections is essential for SOC and IR teams.
 
-## 🔁 Incident Response Process (NIST SP 800-61 Rev. 2)
+## Incident Response Process (NIST SP 800-61 Rev. 2)
 | **Phase**                       | **Description**                       |
 |--------------------|-----------------------------------------|
 | Preparation    | Ensure 'netstat', 'ss', and 'lsof' are installed. Enable auditd/network logging. |
@@ -31,11 +31,11 @@ Attackers often use hidden outbound connections to communicate with command-and-
 | Post-Incident Activity | Document  findings, improve firewall rules, configure monitoring tools. |
 
 
-### ⚠️ Scenario: Unexpected Outbound Connection Detected
+### Scenario: Unexpected Outbound Connection Detected
 A Linux system shows an active connection to an unknown IP 45.13.220.98:443, not related to any known services.
 
 
-## 🛠️ Lab Setup 
+## Lab Setup 
 
 ### System Requirements
 - Ubuntu/Kali Linux system
@@ -117,14 +117,14 @@ ufw deny out to 45.13.220.98
 </p>
 <p align="center"><em>Incident Response to suspicious kupdate script</em></p>
 
-## 🛡️ Defensive Recommendations
+## Defensive Recommendations
 - Implement egress filtering to restrict outbound traffic
 - Deploy IDS/IPS solutions to detect and block suspicious activity
 - Continuously monitor outbound connections and detect unusual traffic patterns
 
 ---
 
-## 🧠 Key Learnings
+## Key Learnings
 - ✅ Simulated suspicious outbound connection using `nohup` and `curl`
 - ✅ Detected connection to unknown IP `45.13.220.98:443` using `netstat` and `ss`
 - ✅ Identified and killed the responsible process using `ps` and `grep`
@@ -133,7 +133,7 @@ ufw deny out to 45.13.220.98
 
 ---
 
-## 🎯 Conclusion
+## Conclusion
 
 This lab demonstrated how to detect and investigate suspicious outbound network connections that may indicate C2 activity. I used `netstat`, `ps`, and `ss` to trace the responsible process, killed it, and blocked the destination IP using `ufw`. Additionally, I simulated and responded to a persistence mechanism (`/usr/local/bin/kupdate`) by analyzing and removing its process and binary. These actions reinforced containment and recovery strategies outlined in the NIST incident response lifecycle.
 
