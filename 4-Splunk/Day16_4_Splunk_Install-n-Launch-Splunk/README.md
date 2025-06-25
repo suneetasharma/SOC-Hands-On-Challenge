@@ -77,29 +77,28 @@ sudo ./splunk start
 4. When prompted, set up a admin username and password
 
 ### Step 3: Access Splunk Web Interface
-To make Splunk accessible from other machines on the network (instead of just localhost), you must update the bind IP and open the required port:
+1. To make Splunk accessible from other machines on the network (instead of just localhost), you must update the bind IP and open the required port:
 
-    - Update Blind IP address in splunk-launch.conf 
-    ```
-    sudo vi /opt/splunk/etc/splunk-launch.conf
-      SPLUNK_BINDIP=0.0.0.0
-    ```
+     - Update Blind IP address in splunk-launch.conf 
+        ```
+        sudo vi /opt/splunk/etc/splunk-launch.conf
+          SPLUNK_BINDIP=0.0.0.0
+        ```
 
-    - Allow port 8000 through the firewall
-    ```
-    sudo ufw allow 8000/tcp
-    ```
+      - Allow port 8000 through the firewall
+      ```
+        sudo ufw allow 8000/tcp
+      ```
     
-    - Then access Splunk at:
-    ```
-    http://<ubuntu-server-ip>:8000 or http://192.168.70.4:8000
-    ``` 
+      - Then access Splunk at:
+      ```
+        http://<ubuntu-server-ip>:8000 or http://192.168.70.4:8000
+      ``` 
 
 ### 📸 Screenshot - Access Splunk Web Interface
 <p align="center">
   <img src="../../Screenshots/Day-16-Splunk_Access-Splunk-Web-Interface.png" width="400">
 </p> <p align="center"><em>Splunk Web Interface</em></p>
-
 
 
 2. Log in with the admin credentials created above
