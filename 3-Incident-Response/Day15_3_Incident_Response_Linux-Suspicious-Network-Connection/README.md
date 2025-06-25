@@ -17,7 +17,7 @@ Investigate and respond to a suspicious outbound network connection from a Linux
 - [Key Learnings](#key-learnings)
 - [Conclusion](#conclusion)
 
-
+---
 
 ## Why It Matters
 Attackers often use hidden outbound connections to communicate with command-and-control (C2) servers. Detecting and cutting off these connections is essential for SOC and IR teams.
@@ -42,7 +42,7 @@ A Linux system shows an active connection to an unknown IP 45.13.220.98:443, not
 - Internet access
 - Tools: curl, netstat or ss, lsof
 
-Simulate Suspicious Connection
+### Simulate Suspicious Connection
 ```
 nohup bash -c 'while true; do curl http://45.13.220.98/ping >/dev/null 2>&1; sleep 30; done' &
 ```
