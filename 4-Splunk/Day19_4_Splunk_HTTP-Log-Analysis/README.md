@@ -48,7 +48,7 @@ source="http_logs.json" host="SS-Lab-HTTPLogAnalysis" index="http_lab" sourcetyp
 
 ### 📸 Screenshot - Top 10 Endpoints generating Web Traffic
 <p align="center">
-  <img src="../../Screenshots/Day-19_Splunk_SPL-Top-10-Endpoints-Generating-Web-Traffic19.png" width="500">
+  <img src="../../Screenshots/Day-19_Splunk_SPL-Top-10-Endpoints-Generating-Web-Traffic.png" width="500">
 </p>
 
 
@@ -59,7 +59,7 @@ status_code>="500" status_code<="600"
 | stats count as server_errors
 ```
 
-### 📸 Screenshot
+### 📸 Screenshot - Count the number of Server error
 <p align="center">
   <img src="../../Screenshots/Day-19_Splunk_SPL-Number-of-Server-Errors.png" width="500">
 </p>
@@ -71,7 +71,7 @@ source="http_logs.json" host="SS-Lab-HTTPLogAnalysis" index=http_lab sourcetype=
 | stats count by user_agent
 ```
 
-### 📸 Screenshot
+### 📸 Screenshot - User-Agents associated with possible scripted attacks
 <p align="center">
   <img src="../../Screenshots/Day-19_Splunk_SPL-User-Agents-Associated-with-Scripted-Errors.png" width="600">
 </p>
@@ -83,7 +83,7 @@ source="http_logs.json" host="SS-Lab-HTTPLogAnalysis" index=http_lab sourcetype=
 | sort -resp_body_len
 ```
 
-### 📸 Screenshot
+### 📸 Screenshot - Large file transfers 
 <p align="center">
   <img src="../../Screenshots/Day-19_Splunk_SPL-Large-File-Transfers.png" width="500">
 </p>
