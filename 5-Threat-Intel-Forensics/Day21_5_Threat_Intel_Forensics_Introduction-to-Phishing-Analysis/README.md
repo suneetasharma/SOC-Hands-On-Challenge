@@ -15,7 +15,7 @@ Learn how to analyze a phishing email by examining headers, body, URLs, and atta
 - [Phishing Analysis Process](#phishing-analysis-process)
 - [Suspicious Email Attachment Indicators](#suspicious-email-attachment-indicators)
 - [Task: Investigating a Lookalike Domain Email](#task-investigating-a-lookalike-domain-email)
-- [Submission](#Phishing Analysis Summary)
+- [Phishing Analysis Summary](#phishing-analysis-summary)
 
 ---
 
