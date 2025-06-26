@@ -48,28 +48,28 @@ Threat Intelligence (TI) is information about threats, threat actors, and their 
 ---
 
 ## Required Submission
-- 🔹 IP Lookup - The IP address 185.220.101.19 belongs to a Tor network and has a self-signed certificate for anonymity
+🔹 IP Lookup - The IP address 185.220.101.19 belongs to a Tor network and has a self-signed certificate for anonymity
 
  ### Screenshot from AbuseIPDB showing details of 185.220.101.19
 <p align="center">
   <img src="../../Screenshots/Day-23_Threat-Intelligence_IP-Lookup.png" alt="AbuseIPDB showing details of 185.220.101.19" width="500">
 </p>
 
-- 🔹 Domain Lookup - The domain name secure-login-verification.com is associated with phishing attacks. 
+🔹 Domain Lookup - The domain name secure-login-verification.com is associated with phishing attacks. 
 
  ### Screenshot - VirusTotal showing details of secure-login-verification
 <p align="center">
   <img src="../../Screenshots/Day-23_Threat-Intelligence_Domain-Lookup.png" alt="VirusTotal showing details of secure-login-verification" width="500">
 </p>
 
-- 🔹 Hash Analysis - The hash 44d88612fea8a8f36de82e1278abb02f is associated with the Eicar testing file and is not malicious. Screenshot from VirusTotal showing file type, detection ratio, and malware name for the hash 44d88612fea8a8f36de82e1278abb02f. It's merely used to trigger antivirus software detection mechanisms.
+ 🔹 Hash Analysis - The hash 44d88612fea8a8f36de82e1278abb02f is associated with the Eicar testing file and is not malicious. Screenshot from VirusTotal showing file type, detection ratio, and malware name for the hash 44d88612fea8a8f36de82e1278abb02f. It's merely used to trigger antivirus software detection mechanisms.
 
  ### Screenshot - VirusTotal showing details of Hash
 <p align="center">
   <img src="../../Screenshots/Day-23_Threat-Intelligence_Hash-Analysis.png" alt="VirusTotal showing details of Hash" width="500">
 </p>
 
--🔹 Threat Intelligence Feed (Optional Bonus) - The IOC found in AlienVault OTX or ThreatFox with campaign name or tags
+🔹 Threat Intelligence Feed (Optional Bonus) - The IOC found in AlienVault OTX or ThreatFox with campaign name or tags
 
  ### Screenshot - ThreatFox with compaign tags
 <p align="center">
