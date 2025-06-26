@@ -28,15 +28,17 @@ Threat Intelligence (TI) is information about threats, threat actors, and their 
 
 ---
 
-## Lab Setup
-- 📩 Download Email Sample: sample-1.eml
-- 💻 Tools You Will Use:
-    - VirusTotal
-    - AbuseIPDB
-    - URLScan.io
-    - AlienVault OTX
-    - ThreatFox
-    - MXToolbox Header Analyzer
+## 🛠️ Lab Setup
+
+📩 **Download Email Sample**: `sample-1.eml`  
+💻 **Tools You Will Use**:
+- [VirusTotal](https://www.virustotal.com/)
+- [AbuseIPDB](https://www.abuseipdb.com/)
+- [URLScan.io](https://urlscan.io/)
+- [AlienVault OTX](https://otx.alienvault.com/)
+- [ThreatFox](https://threatfox.abuse.ch/)
+- [MXToolbox Header Analyzer](https://mxtoolbox.com/EmailHeaders.aspx)
+
 
 ---
 
