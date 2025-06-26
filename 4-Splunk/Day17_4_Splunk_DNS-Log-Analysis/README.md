@@ -1,10 +1,25 @@
-# 🛡️ Day 17 – [Lab Title Placeholder]
+#  Day 17 – Splunk DNS Log Analysis Using Zeek Logs
+
 
 ## 📌 Objective
-In this lab, I learned 
-- how to ingest and analyze DNS logs in Splunk. 
-- Understand how to extract useful information such as DNS query types, source hosts, and common destinations.
-- Practice building basic SPL (Search Processing Language) queries to investigate DNS activity.
+In this lab, I practiced how to:
+- Ingest and analyze DNS logs in Splunk
+- Extract meaningful data such as query types, source hosts, and top destinations
+- Build and run basic SPL (Search Processing Language) queries to investigate DNS activity
+
+
+## 🗂️ Table of Contents
+- [Objective](#objective)
+- [Lab Setup](#lab-setup)
+- [Upload DNS Log into Splunk](#steps-to-upload-dns-log-into-splunk)
+- [Lab Tasks](#lab-tasks-use-spl-queries-to-perform-following-tasks)
+  - [Task 1: Most Frequently Queried Domain Names](#task-1-identify-the-most-frequently-queried-domain-names)
+  - [Task 2: Most Active User IPs](#task-2-find-the-most-active-user-ips-generating-dns-traffic)
+  - [Task 3: DNS Query Types Breakdown](#task-3-breakdown-of-dns-query-types-a-aaaa-cname-ptr)
+- [Key Learnings](#key-learnings)
+- [Conclusion](#conclusion)
+
+
 ---
 
 ## 🛠️ Lab Setup 
@@ -26,12 +41,7 @@ In this lab, I learned
 ## 🔍 Lab Tasks: Use SPL queries to perform following tasks:
 
 ✅Task 1: Identify the most frequently queried domain names
-```
-index=dns_lab sourcetype="json"
-| stats count by query
-| sort -count
-```
- - - SPL Query to identify the most frequently queried domain names
+ - SPL Query to identify the most frequently queried domain names
   ```
   source="dns_logs.json" index="main" sourcetype="_json" | stats count by query | sort -count
   ```
@@ -43,12 +53,7 @@ index=dns_lab sourcetype="json"
 
 
 ✅Task 2: Find the most active user IPs generating DNS traffic
-```
-index=dns_lab sourcetype="json"
-| stats count by "id.orig_h"
-| sort -count
-```
-  - SPL Query to find out the most active user IPs generating DNS traffic
+  - SPL Query to find out the most active user IPs generating DNS traffic:'id.orig_h' (which means Source host initiating the DNS query (from Zeek logs))
   ```
   source="dns_logs.json" index="main" sourcetype="_json" | stats count by *id.orig_h* | sort -count
   ```
@@ -60,13 +65,9 @@ index=dns_lab sourcetype="json"
 
 
 ✅Task 3: Breakdown of DNS query types (A, AAAA, CNAME, PTR)
-``` 
-index=dns_lab sourcetype="json"
-| stats count by qtype
-```
-  - SPL Query
+  - SPL Query to breakdown DNS query types: 'qtype' (e.g., A, AAAA, PTR)
   ```
-  source="dns_logs.json" index="main" sourcetype="_json" | stats count by *id.orig_h* | sort -count
+  source="dns_logs.json" index="main" sourcetype="_json" | stats count by qtype
   ```
 
 ## 📸 Screenshot - SPL Breakdown of DNS Query Types
@@ -83,4 +84,4 @@ index=dns_lab sourcetype="json"
 ---
 
 ## 🎯 Conclusion
-Splunk centralize logs collection from diverse system, applications and network devices into a single platform. This unified approach help SOC Analyst's visibility  across the entire IT environment, enabling security teams to detect threats and anomalies that might go unnoticed in siloed or fragmented log setups. With all logs in one place, organizations can implement consistent security controls, such as role-based access and tamper-evident storage, which help protect log integrity and prevent unauthorized access or manipulation. Centralized logging also supports real-time monitoring and automated alerting, allowing for faster detection and response to security incidents. Additionally, it simplifies forensic investigations and compliance reporting by providing a single, reliable source of truth for all security-relevant events. Overall, centralized log collection is foundational for proactive, efficient, and robust security monitoring.
+Splunk enables centralized log collection from systems, applications, and network devices into one platform. This lab demonstrated how to ingest Zeek DNS logs and extract key insights using SPL queries. Centralized logging improves visibility, threat detection, and incident response across the SOC environment. It also supports real-time alerting, compliance auditing, and forensic analysis, making it an essential tool for modern cybersecurity operations.
