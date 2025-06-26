@@ -1,7 +1,6 @@
 # 🛡️ Day 18 – Splunk SSH Log Analysis using Zeek logs
 
 ## Objective
-## 📌 Objective
 
 In this lab, I practiced how to:
 - Ingest and analyze SSH logs using Splunk
@@ -28,7 +27,7 @@ In this lab, I practiced how to:
 
 ---
 
-## 🧪 Steps to Upload SSH Log into Splunk
+## Steps to Upload SSH Log into Splunk
 1. Go to Splunk Web → Settings > Add Data.
 2. Choose Upload and select synthetic_zeek_ssh.json.
 3. Set Source type: json or create a new one zeek:ssh.
@@ -78,7 +77,7 @@ source="ssh_logs.json" host="UbuntuServer" sourcetype="_json" | stats count as t
 
 ---
 
-## 🧠 Key Learnings
+## Key Learnings
 - ✅ Ingested and indexed SSH logs into Splunk using JSON format
 - ✅ Built SPL queries to analyze authentication success/failure patterns
 - ✅ Identified top 10 endpoints with failed SSH login attempts
@@ -88,7 +87,7 @@ source="ssh_logs.json" host="UbuntuServer" sourcetype="_json" | stats count as t
 
 ---
 
-## 🎯 Conclusion
+## Conclusion
 This lab focused on analyzing SSH logs using Splunk’s SPL queries. I learned how to detect failed and successful authentication attempts, identify high-risk endpoints, and classify event types to uncover potential brute-force attacks. These skills are essential for threat hunting and incident response within SOC environments.
 
 <details>
