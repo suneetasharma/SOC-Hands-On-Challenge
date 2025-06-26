@@ -1,4 +1,4 @@
-# 🛡️ # 🛡️ Day 21 – Introduction to Phishing Analysis
+# 🛡️ Day 21 – Introduction to Phishing Analysis
 
 ## Objective
 
@@ -39,7 +39,7 @@ Learn how to analyze a phishing email by examining headers, body, URLs, and atta
 
 ---
 
-## 🎯 Phishing Techniques with Examples
+## Phishing Techniques with Examples
 
 | **Technique**                | **Example**                      |
 |-----------------------------|----------------------------------------------|
@@ -53,7 +53,7 @@ Learn how to analyze a phishing email by examining headers, body, URLs, and atta
 
 ---
 
-## 🛠️ Common Tools Used in Phishing Analysis
+## Common Tools Used in Phishing Analysis
 
 | Tool                       | Purpose                                                |
 |----------------------------|--------------------------------------------------------|
@@ -67,7 +67,7 @@ Learn how to analyze a phishing email by examining headers, body, URLs, and atta
 
 ---
 
-## 🧪 Phishing Analysis Process
+## Phishing Analysis Process
 
 | **Step** | **Action**                                                                 |
 |---------|------------------------------------------------------------------------------|
@@ -82,7 +82,7 @@ Learn how to analyze a phishing email by examining headers, body, URLs, and atta
 
 ---
 
-## 📎 Suspicious Email Attachment Indicators
+## Suspicious Email Attachment Indicators
 
 | **Indicator**                     | **Example**                                 |
 |----------------------------------|---------------------------------------------|
@@ -94,7 +94,7 @@ Learn how to analyze a phishing email by examining headers, body, URLs, and atta
 
 ---
 
-## 🧪 Task: Investigating a Lookalike Domain Email
+## Task: Investigating a Lookalike Domain Email
 
 ### Scenario:
 Your SOC received an email claiming to be from PayPal, sent from: noreply@secure-paypai.com
@@ -102,7 +102,7 @@ Your SOC received an email claiming to be from PayPal, sent from: noreply@secure
 ### Question 1:  
 What is the reputation of the domain?
 
-## 🔎 Use tools like:
+## Use tools like:
 - [VirusTotal](https://www.virustotal.com/)
 - [Talos Intelligence](https://talosintelligence.com/)
 - [Whois Lookup](https://who.is/)
@@ -111,13 +111,13 @@ What is the reputation of the domain?
 
 ---
 
-## 🧾 Phishing Analysis Summary
+## Phishing Analysis Summary
 I investigated the suspicious sender domain noreply@secure-paypai.com, which impersonates PayPal using a lookalike domain (secure-paypai.com). I used multiple tools — VirusTotal, Whois Lookup, and MxToolBox — to assess its reputation. All sources flagged the domain as associated with phishing activity. The investigation confirmed display name spoofing and URL deception, commonly used in credential-harvesting campaigns.
 
 
 ## 📸 Screenshot Evidence
 <p align="center">
-  <img src="../../Screenshots/Day-21_VirusTotal_Secure-Paypai-DomainDay21.png" alt="VirusTotal Report" width="500">
+  <img src="../../Screenshots/Day-21_VirusTotal_Secure-Paypai-Domain.png" alt="VirusTotal Report" width="500">
 </p>
 
 ---
