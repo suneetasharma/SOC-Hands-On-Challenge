@@ -1,19 +1,35 @@
 # 🛡️ Day 23 – Threat Intelligence Basics
+## Objective
 
-## 📌 Objective
- In this lab, I learned how to extract Indicators of Compromise (IOCs) from a suspicious email and use threat intelligence tools to investigate their context and maliciousness.
+In this lab, I practiced extracting Indicators of Compromise (IOCs) from a suspicious email and enriched them using open-source threat intelligence platforms. I aimed to assess the context and maliciousness of IPs, domains, and hashes to support incident response decisions.
 
-##  What is Threat Intelligence?
+
+## Table of Contents
+- [Objective](#objective)
+- [What is Threat Intelligence?](#what-is-threat-intelligence)
+- [Types of Threat Intelligence](#types-of-threat-intelligence)
+- [Lab Setup](#lab-setup)
+- [Tasks](#tasks)
+- [Required Submission](#required-submission)
+- [Learning Outcome](#learning-outcome)
+
+
+## What is Threat Intelligence?
 Threat Intelligence (TI) is information about threats, threat actors, and their tactics. It helps SOC analysts investigate alerts faster, make informed decisions, and respond to incidents more effectively.
 
-## Types of Threat Intelligence:
-Tactical: IOCs like IPs, hashes, domains
-Operational: Info about campaigns, malware families
-Strategic: Big-picture trends, threat groups, geopolitical context
+
+## Types of Threat Intelligence
+
+| Type       | Description                                                |
+|------------|------------------------------------------------------------|
+| Tactical   | Low-level IOCs like IPs, hashes, domains                   |
+| Operational| Info on campaigns, malware families, and TTPs              |
+| Strategic  | Trends, motivations, threat actors, and geopolitical risks |
+
 ---
 
 ## Lab Setup
--📩 Download Email Sample: sample-1.eml
+- 📩 Download Email Sample: sample-1.eml
 - 💻 Tools You Will Use:
     - VirusTotal
     - AbuseIPDB
@@ -41,26 +57,30 @@ Strategic: Big-picture trends, threat groups, geopolitical context
 
 - 🔹 Domain Lookup - The domain name secure-login-verification.com is associated with phishing attacks. 
 
- ### Screenshot from VirusTotal showing details of secure-login-verification
+ ### Screenshot - VirusTotal showing details of secure-login-verification
 <p align="center">
   <img src="../../Screenshots/Day-23_Threat-Intelligence_Domain-Lookup.png" alt="VirusTotal showing details of secure-login-verification" width="500">
 </p>
 
 - 🔹 Hash Analysis - The hash 44d88612fea8a8f36de82e1278abb02f is associated with the Eicar testing file and is not malicious. Screenshot from VirusTotal showing file type, detection ratio, and malware name for the hash 44d88612fea8a8f36de82e1278abb02f. It's merely used to trigger antivirus software detection mechanisms.
 
- ### Screenshot from VirusTotal showing details of Hash
+ ### Screenshot - VirusTotal showing details of Hash
 <p align="center">
   <img src="../../Screenshots/Day-23_Threat-Intelligence_Hash-Analysis.png" alt="VirusTotal showing details of Hash" width="500">
 </p>
 
 -🔹 Threat Intelligence Feed (Optional Bonus) - The IOC found in AlienVault OTX or ThreatFox with campaign name or tags
 
- ### Screenshot from ThreatFox with compaign tags
+ ### Screenshot - ThreatFox with compaign tags
 <p align="center">
   <img src="../../Screenshots/Day-23_Threat-Intelligence_ThreatFox-with-TI-Compaign-Tags.png" alt="ThreatFox with Compaign tags" width="500">
 </p>
 
-## ✅ Learning Outcome
+### 🧾 Recap
+All three IOCs analyzed were relevant for understanding attacker infrastructure and techniques. The IP was tied to a Tor node, the domain flagged as phishing-related, and the hash matched a benign EICAR test file. This reinforced the importance of context when triaging alerts in the SOC.
+
+
+## Learning Outcome
 In this lab, I learned:
 - How to extract IOCs from suspicious phishing emails
 - And use Threat Intelligence tools to investigate their context and maliciousness, such as assess IPs, domains, and links
