@@ -5,6 +5,16 @@ Analyze a real-world phishing email sample using manual techniques. Learn to ins
 
 ---
 
+## 🗂️ Table of Contents
+- [Objective](#objective)
+- [Lab Setup](#lab-setup)
+- [Task: Analyze the Suspicious Email](#task-analyze-the-suspicious-email)
+- [Questions to Answer](#questions-to-answer)
+- [Required Submissions](#required-submissions)
+- [Recap](#recap)
+- [Learning Outcome](#learning-outcome)
+
+
 ## 🛠️ Lab Setup
 📨 **Email Format**: Download and use `.eml` file for analysis  
 - 🧰 **Tools Used**:
@@ -18,7 +28,7 @@ Analyze a real-world phishing email sample using manual techniques. Learn to ins
 
 ## 🧪 Task: Analyze the Suspicious Email
 
-### 📥 Scenario:
+### 📥 Scenario: 
 
 You received an email from **BANCO DO BRADESCO LIVELO** claiming that your card has **92,990 points expiring today**, sent from the address: banco.bradesco@atendimento.com.br
 
@@ -49,7 +59,7 @@ You received an email from **BANCO DO BRADESCO LIVELO** claiming that your card 
 - Screenshot of **IP reputation lookup**
   - (AbuseIPDB, VirusTotal, or Talos)
 
-  ### 📸 Screenshot - Virus Total - IP reputation lookup
+  ### 📸 Screenshot - Virus Total - IP Reputation Lookup
 <p align="center"> 
   <img src="../../Screenshots/Day-22_Phishing-Analysis_VirusTotal-IP-Reputation-Lookup.png" alt="Email Header with From, Return-Path, Sender IP address" width="600">
 </p>
@@ -57,7 +67,7 @@ You received an email from **BANCO DO BRADESCO LIVELO** claiming that your card 
 - Screenshot of **email content or suspicious URL**
   - Show spoofed branding, urgency, or malicious intent
 
-### 📸 Screenshot - Email content with suspicious URL
+### 📸 Screenshot - Email Content with Suspicious URL
 <p align="center">
   <img src="../../Screenshots/Day-22_Phishing-Analysis_HTML-Preview.png" alt="Email content with suspicious URL" width="600">
 </p> 
@@ -65,7 +75,7 @@ You received an email from **BANCO DO BRADESCO LIVELO** claiming that your card 
 ---
 
 ### Recap 
-This investigation confirmed that the sender’s domain was suspicious and the IP was flagged by reputation services. A spoofed brand and urgent messaging were present in the body content.
+This investigation confirmed that the sender’s domain was suspicious and the IP had a poor reputation. The email content included spoofed branding and urgency—classic signs of a phishing attempt. The analysis provided a full walkthrough of how to extract key indicators and assess threat credibility using open-source tools.
 
 
 ## ✅ Learning Outcome
