@@ -40,7 +40,7 @@ In this lab, I practiced how to:
 
 ## Lab Tasks: Use SPL queries to perform following tasks:
 
-✅Task 1: Identify the most frequently queried domain names
+Task 1: Identify the most frequently queried domain names
  - SPL Query to identify the most frequently queried domain names
   ```
   source="dns_logs.json" index="main" sourcetype="_json" | stats count by query | sort -count
@@ -52,7 +52,7 @@ In this lab, I practiced how to:
 </p>
 
 
-✅Task 2: Find the most active user IPs generating DNS traffic
+Task 2: Find the most active user IPs generating DNS traffic
   - SPL Query to find out the most active user IPs generating DNS traffic:'id.orig_h' (which means Source host initiating the DNS query (from Zeek logs))
   ```
   source="dns_logs.json" index="main" sourcetype="_json" | stats count by *id.orig_h* | sort -count
@@ -64,7 +64,7 @@ In this lab, I practiced how to:
 </p>
 
 
-✅Task 3: Breakdown of DNS query types (A, AAAA, CNAME, PTR)
+Task 3: Breakdown of DNS query types (A, AAAA, CNAME, PTR)
   - SPL Query to breakdown DNS query types: 'qtype' (e.g., A, AAAA, PTR)
   ```
   source="dns_logs.json" index="main" sourcetype="_json" | stats count by qtype
