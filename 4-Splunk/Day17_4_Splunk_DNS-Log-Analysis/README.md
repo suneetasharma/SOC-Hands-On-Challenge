@@ -22,14 +22,14 @@ In this lab, I practiced how to:
 
 ---
 
-## 🛠️ Lab Setup 
+## Lab Setup 
 - ✅ Splunk: Already installed and accessible.
 - ✅ Data Source: JSON-formatted Zeek DNS logs.
 - 🌐 Uploaded sample Log File into Splunk for ingestion.
 
 ---
 
-## 🧪 Steps to Upload DNS Log into Splunk
+## Steps to Upload DNS Log into Splunk
 1. Go to Splunk Web → Settings > Add Data.
 2. Choose Upload and select the file dns.log.
 3. Set Source type: json or create a custom source type dns.
@@ -38,7 +38,7 @@ In this lab, I practiced how to:
 
 ---
 
-## 🔍 Lab Tasks: Use SPL queries to perform following tasks:
+## Lab Tasks: Use SPL queries to perform following tasks:
 
 ✅Task 1: Identify the most frequently queried domain names
  - SPL Query to identify the most frequently queried domain names
@@ -77,11 +77,11 @@ In this lab, I practiced how to:
 
 ---
 
-## 🧠 Key Learnings
+## Key Learnings
 - Learned how to ingest logs files into Splunk
 - And analyzed data using SPL (Search Processing Language) queries from the uploaded DNA logs file to extract valuable information on DNS query types, source hosts, and common destinations.
 
 ---
 
-## 🎯 Conclusion
+## Conclusion
 Splunk enables centralized log collection from systems, applications, and network devices into one platform. This lab demonstrated how to ingest Zeek DNS logs and extract key insights using SPL queries. Centralized logging improves visibility, threat detection, and incident response across the SOC environment. It also supports real-time alerting, compliance auditing, and forensic analysis, making it an essential tool for modern cybersecurity operations.
