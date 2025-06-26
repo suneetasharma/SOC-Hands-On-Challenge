@@ -1,10 +1,23 @@
 # 🛡️ Day 18 – Splunk SSH Log Analysis using Zeek logs
 
 ## Objective
+## 📌 Objective
+
 In this lab, I practiced how to:
-- Ingest and analyze SSH logs in Splunk
-- Extract meaningful data such as failed SSH login attempts, total SSH connections and count all event types
-- Build and run basic SPL (Search Processing Language) queries to investigate SSH activity
+- Ingest and analyze SSH logs using Splunk
+- Extract key insights such as failed login attempts, total SSH connections, and event type distribution
+- Apply SPL (Search Processing Language) to investigate SSH activity and potential brute-force attacks
+
+## 🗂️ Table of Contents
+- [Objective](#objective)
+- [Lab Setup](#lab-setup)
+- [Steps to Upload SSH Log into Splunk](#steps-to-upload-ssh-log-into-splunk)
+- [Lab Tasks](#lab-tasks---use-spl-queries-to-complete-the-following-analysis)
+  - [Task 1: Top 10 Endpoints with Failed SSH Logins](#task-1-list-the-top-10-endpoints-with-failed-ssh-login-attempts)
+  - [Task 2: Total SSH Connections](#task-2-find-the-number-of-total-ssh-connections)
+  - [Task 3: Count All SSH Event Types](#task-3-count-all-event-types-successful-failed-no-auth-multiple-failed)
+- [Key Learnings](#key-learnings)
+- [Conclusion](#conclusion)
 
 ---
 
@@ -21,6 +34,7 @@ In this lab, I practiced how to:
 3. Set Source type: json or create a new one zeek:ssh.
 4. Index: Choose main or create a new index like ssh_lab.
 5. Finish the upload and confirm indexing.
+
 
 ---
 
@@ -65,13 +79,24 @@ source="ssh_logs.json" host="UbuntuServer" sourcetype="_json" | stats count as t
 ---
 
 ## 🧠 Key Learnings
-- Learned how to ingest logs files into Splunk
-- Analyzed data using SPL (Search Processing Language) queries from SSH Brute attack sample logs fil:
-    - List  top 10 endpoints with failed SSH login attempts, 
-    - Find the number of total SSH connections and 
-    - Count all event types (successful, failed, no-auth, multiple-failed) 
+- ✅ Ingested and indexed SSH logs into Splunk using JSON format
+- ✅ Built SPL queries to analyze authentication success/failure patterns
+- ✅ Identified top 10 endpoints with failed SSH login attempts
+- ✅ Counted total SSH connections and categorized events (e.g., success, fail, no-auth)
+- ✅ Gained hands-on experience detecting brute-force or unauthorized access attempts
+
 
 ---
 
 ## 🎯 Conclusion
-In this lab focused on SPL queries to ingesting and analyzing SSH logs using Splunk. And gained insights into detecting both failed and successful SSH authentication attempts. Additionally, I learned how to identify unusual SSH activity that may suggest brute force attacks or unauthorized access.
+This lab focused on analyzing SSH logs using Splunk’s SPL queries. I learned how to detect failed and successful authentication attempts, identify high-risk endpoints, and classify event types to uncover potential brute-force attacks. These skills are essential for threat hunting and incident response within SOC environments.
+
+<details>
+<summary>💡 Pro Tip: Enrich SSH Data in Splunk</summary>
+
+- Use field aliases or `eval` to normalize IP fields (e.g., `src_ip`, `dest_ip`)
+- Combine SSH logs with threat intel feeds for IP reputation lookups
+- Set alerts for high failed login counts or unusual SSH ports
+- Use Splunk visualizations to track brute-force patterns over time
+
+</details>
