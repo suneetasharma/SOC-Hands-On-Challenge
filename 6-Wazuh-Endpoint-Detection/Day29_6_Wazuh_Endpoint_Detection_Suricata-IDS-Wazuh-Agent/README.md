@@ -149,7 +149,7 @@ rule.group:suricata
 - ✅ Screenshot of Suricata service running (systemctl status suricata)
 ### 📸 Screenshot - Wazuh Agent with Suricata Service running
 <p align="center">
-  <img src="../../Screenshots/Day-29_EDR_Wazu-Agent_Suricata-Service.png" alt="Wazuh Agent with Suricata Service running" width="600">
+  <img src="../../Screenshots/Day-29_EDR_Wazuh-Agent_Suricata-Service.png" alt="Wazuh Agent with Suricata Service running" width="600">
 </p>
 
 - ✅ Screenshot of Wazuh dashboard showing Suricata-tagged alerts
