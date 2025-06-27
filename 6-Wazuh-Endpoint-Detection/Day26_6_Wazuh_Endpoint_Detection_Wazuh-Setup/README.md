@@ -1,4 +1,4 @@
-# # 🛡️ Day 26 – Setting Up Wazuh: Open Source EDR and SIEM
+# 🛡️ Day 26 – Setting Up Wazuh: Open Source EDR and SIEM
 
 ---
 
@@ -124,7 +124,14 @@ sudo systemctl enable wazuh-agent
     - Wazuh role in Security Monitoring: Wazuh has emerged as a powerful open-source security monitoring platform that provides organizations with comprehensive visibility into their security posture. 
     - Wazuh delivers critical capabilities that address multiple dimensions of security monitoring that includes, unified visibility, real-time threat detection, file integrity monitoring, vulnerability assessment, compliance monitoring and centralised monitoring.
 
+## Observation
+Wazuh provides SOC teams with real-time visibility into endpoints by aggregating logs, detecting anomalies, and enforcing File Integrity Monitoring (FIM). It also supports threat intelligence integration and compliance reporting. By onboarding an agent, analysts can monitor login attempts, configuration changes, or suspicious command execution from a centralized dashboard.
 
+## Conclusion
+- ✅ Installed and configured Wazuh Server using Quick Start
+- ✅ Deployed Wazuh Agent on an Ubuntu system
+- ✅ Verified agent status via the Wazuh web UI
+- ✅ Understood how SOC analysts use Wazuh for endpoint visibility, alerting, and log correlation
 
 
 ---
