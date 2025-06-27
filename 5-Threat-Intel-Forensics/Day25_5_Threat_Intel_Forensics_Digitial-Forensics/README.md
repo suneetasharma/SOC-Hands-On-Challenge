@@ -123,23 +123,28 @@ strings linux_memory.mem | grep "mozilla"
 ```
 If strings related to applications, files, or processes appear, the dump is valid.
 
+## 📸 Screenshot - Validate Memory dump
+<p align="center">
+  <img src="../../Screenshots/Day-25_Digital-Forensics_Validate-Memory-Dump.png" alt="Validate Memory dump" width="600">
+</p>
+
 ### Step 5: Transfer the Memory Dump to the Analysis Machine
-On the forensic workstation: create a directory to store the memory dump:
+- On the forensic workstation: create a directory to store the memory dump:
 ```
 mkdir ~/forensics/memory_dumps
 ```
-Transfer the memory dump from the Target Machine to the Analysis Machine using scp:
+- Transfer the memory dump from the Target Machine to the Analysis Machine using scp:
 ```
 scp user@<192.168.70.4>:/home/user/linux_memory.mem ~/forensics/memory_dumps/
 ```
-Verify the file is successfully transferred:
+- Verify the file is successfully transferred:
 ```
 ls -lh ~/forensics/memory_dumps/
 ```
 
 ## 📸 Screenshot - Transfer Memory dump to Analysis (Kali)) server
 <p align="center">
-  <img src="../../Screenshots/DDay-25_Digital-Forensics_Transfer-MemoryDump-to-AnalysisMachine.png" alt="Transfer Memory dump to Analysis server" width="600">
+  <img src="../../Screenshots/Day-25_Digital-Forensics_Transfer-MemoryDump-to-AnalysisMachine.png" alt="Transfer Memory dump to Analysis server" width="600">
 </p>
 
 ---
