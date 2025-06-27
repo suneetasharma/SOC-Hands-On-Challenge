@@ -65,9 +65,8 @@ hydra -l ubuntu -P /usr/share/wordlists/rockyou.txt <target-IP> ssh
 
     - -P rockyou.txt: Uses a common password list
     - If successful, Hydra will show:
-    ```
-      [22][ssh] host: <192.168.1.4> login: ubuntu password: <password-123>
-    ```
+``` [22][ssh] host: <192.168.1.4> login: ubuntu password: <password>
+```
 
 ### Step 3: Detect Brute-Force in Wazuh Dashboard
 - Log into the Wazuh dashboard: https://<wazuh-server-ip>:5601
