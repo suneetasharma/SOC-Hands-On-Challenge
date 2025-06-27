@@ -1,4 +1,4 @@
-# # 🛡️ Day 28 – EDR Basics: Detecting SSH Brute-Force Attacks with Wazuh
+#🛡️ Day 28 – EDR Basics: Detecting SSH Brute-Force Attacks with Wazuh
 
 ## Objective
 
@@ -43,7 +43,7 @@ sudo nano /var/ossec/etc/ossec.conf
 
 - Update the <address> tag with your Wazuh Server IP:
 ```
-<address>WAZUH-SERVER-IP</address>
+<address>192.168.1.13</address>
 ```
 
 - Restart the agent service
@@ -66,8 +66,9 @@ hydra -l ubuntu -P /usr/share/wordlists/rockyou.txt <target-IP> ssh
     - -P rockyou.txt: Uses a common password list
 
     - If successful, Hydra will show:
+
     ```
-    [22][ssh] host: <target-IP> login: ubuntu password: <password>
+    [22][ssh] host: <192.168.1.4> login: ubuntu password: <password-123>
     ```
 
 ### Step 3: Detect Brute-Force in Wazuh Dashboard
@@ -86,7 +87,7 @@ rule.id:(5551 OR 5712)
 
 ## Submission Checklist
 - ✅ Screenshot of Wazuh dashboard showing brute-force detection alerts
-    ### 📸 Screenshot
+    ### 📸 Screenshot - Wazuh Dashboard showing SSH-Brute-Force Alerts
     <p align="center">
       <img src="../../Screenshots/Day-28_EDR_Wazuh-TSC-Dashboard-SSH-Brute-Force-Alerts.png" alt="Wazuh Dashboard" width="600">
     </p>
@@ -98,7 +99,7 @@ rule.id:(5551 OR 5712)
     </p>
 
 - ✅ Brief observation on the importance of SSH brute-force detection in SOC monitoring
-    ### Observation
+    ## Observation
     SSH brute-force detection is critical for identifying unauthorized access attempts, especially against externally exposed servers. In this lab, simulating brute-force activity with Hydra and detecting it via Wazuh provided hands-on experience with authentication monitoring. These capabilities help SOC analysts identify attack patterns early and enforce defensive measures like IP blocking or MFA.
 
 ## Conclusion
