@@ -1,4 +1,4 @@
-#🛡️ Day 28 – EDR Basics: Detecting SSH Brute-Force Attacks with Wazuh
+# 🛡️ Day 28 – EDR Basics: Detecting SSH Brute-Force Attacks with Wazuh
 
 ## Objective
 
@@ -64,11 +64,9 @@ hydra -l ubuntu -P /usr/share/wordlists/rockyou.txt <target-IP> ssh
     - -l ubuntu: Specifies the username to attack
 
     - -P rockyou.txt: Uses a common password list
-
     - If successful, Hydra will show:
-
     ```
-    [22][ssh] host: <192.168.1.4> login: ubuntu password: <password-123>
+      [22][ssh] host: <192.168.1.4> login: ubuntu password: <password-123>
     ```
 
 ### Step 3: Detect Brute-Force in Wazuh Dashboard
