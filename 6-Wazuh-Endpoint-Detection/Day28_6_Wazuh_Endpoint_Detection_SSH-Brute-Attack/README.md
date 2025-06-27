@@ -59,13 +59,14 @@ sudo apt update && sudo apt install hydra -y
 
 - Run the brute-force attack 
 ```
-hydra -l ubuntu -P /usr/share/wordlists/rockyou.txt <target-IP> ssh
+hydra -l ubuntu -P /usr/share/wordlists/rockyou.txt <192.168.1.4> ssh
 ```
     - -l ubuntu: Specifies the username to attack
 
     - -P rockyou.txt: Uses a common password list
     - If successful, Hydra will show:
-``` [22][ssh] host: <192.168.1.4> login: ubuntu password: <password>
+```
+[22][ssh] host: <192.168.1.4> login: ubuntu password: <password>
 ```
 
 ### Step 3: Detect Brute-Force in Wazuh Dashboard
