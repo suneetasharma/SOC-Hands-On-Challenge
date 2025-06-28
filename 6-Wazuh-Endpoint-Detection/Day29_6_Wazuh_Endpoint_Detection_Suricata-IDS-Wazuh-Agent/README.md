@@ -125,14 +125,14 @@ sudo systemctl restart wazuh-agent
 ### Step4: Simulate Attack from Kali Linux
 On Kali Linux (ss-Kali) terminal, run a SYN scan:
 ```bash
-nmap -sS -T4 <target-ip>
+nmap -sS -T4 <192.168.1.4>
 ``` 
   - -sS: Performs a stealthy SYN scan
   - -T4: Sets aggressive timing for faster scan
 This scan should trigger Suricata detection rules for port scanning.
 
 ### Step 5: View Detection Alerts in Wazuh
-1. Log into the Wazuh Dashboard (https://<192.168.1.13:5601)
+1. Log into the Wazuh Dashboard (https://192.168.1.13:5601)
 2. Navigate to Security Events 
 3. Choose the agent that runs Suricata
 4. Filter logs using this query (Rule Group: Suricata):
