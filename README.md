@@ -1,4 +1,8 @@
-# 🛡️***30-Day SOC Analyst Hands-On Cybersecurity Challenge***
+# 🛡️ 30-Day SOC Analyst Hands-On Cybersecurity Challenge
+
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Status](https://img.shields.io/badge/project-completed-brightgreen)
+
 
 ## 🎯 About the Project
 This repository documents my 30-day hands-on SOC (Security Operations Center) Analyst Challenge. Each day focuses on a practical blue team skill — from log analysis and threat detection to incident response and EDR-based monitoring — using real-world tools like Splunk, Wazuh, Wireshark, Suricata, and forensic platforms.
@@ -58,7 +62,8 @@ Each folder contains 5 labs organized by theme:
 ## 🧑‍💻 About Me
 
 **Sunita Sharma**  
-💼 Cybersecurity QA & Blue Team Enthusiast  
+🔐 Cybersecurity QA Engineer & Blue Team Practitioner  
+📌 Passionate about incident response, log analysis, threat detection, and EDR  
 🔗 [LinkedIn](https://linkedin.com/in/sunitanigam-sharma)
 🌐 [GitHub Portfolio](https://github.com/suneetasharma)
 
@@ -77,4 +82,4 @@ This portfolio is just the beginning. Upcoming projects will include:
 
 ---
 
-- “Let’s detect threats, not just document them.” 🔍🔥
+“Let’s detect threats, not just document them.” 🔍🔥
