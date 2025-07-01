@@ -1,8 +1,16 @@
 # *SOC Analyst 30-Day Challenge*
 
-##🛡️***Hands-On Cybersecurity Challenge Portfolio: 30 Labs in 30 Days***
+##🛡️***30-Day SOC Analyst Hands-On Cybersecurity Challenge***
+This repository documents my 30-day hands-on SOC (Security Operations Center) Analyst Challenge. Each day focuses on a practical blue team skill — from log analysis and threat detection to incident response and EDR-based monitoring — using real-world tools like Splunk, Wazuh, Wireshark, Suricata, and forensic platforms.
 
-Welcome to my SOC Analyst 30-Day Challenge repository! This project showcases hands-on experience across six key SOC domains through daily lab exercises. Each lab demonstrates applied skills in threat detection, SIEM/EDR log analysis, incident response, packet capture review and the use of popular open-source tools.
+**Built as part of my cybersecurity self-learning journey and portfolio.**
+
+## 🧠 What I Learned
+- 🔎 Log analysis (Windows, Linux, IDS, HTTP, SSH, UFW)
+- 📊 Splunk SPL searches for network & host-based indicators
+- 🛡️ Incident response & containment (brute force, malware, phishing)
+- 🧪 Threat detection using Wazuh EDR and Suricata IDS
+- 🧰 Forensic techniques using VirusTotal, URLScan, CyberChef, etc.
 
 ---
 
@@ -18,78 +26,61 @@ Welcome to my SOC Analyst 30-Day Challenge repository! This project showcases ha
 
 ---
 
-## 🎯 Objectives
+## 🗂️ Project Structure
 
-- Analyze and triage real-world security alerts using Wazuh and Suricata.
-- Conduct packet analysis with Wireshark to uncover suspicious activity.
-- Use Splunk for log correlation and alert investigation.
-- Build and fine-tune detection rules.
-- Simulate incident response processes with mapped MITRE ATT&CK techniques.
+Each folder contains 5 labs organized by theme:
 
-Each lab folder contains detailed documentation, screenshots, and my personal reflections on the technical tasks performed.
-
----
-
-## 📁 Repository Structure
-
-The labs are grouped by topic, with each folder covering 5 days of hands-on activities.
-
-SOC-Hands-On-Challenge/
-├── 1-Log-Analysis/ # Days 01–05: Syslog parsing, SSH brute-force detection
-├── 2-Network-Traffic-Analysis/ # Days 06–10: PCAPs, DNS, ARP spoofing (Wireshark)
-├── 3-Incident-Response/ # Days 11–15: IR workflows, documentation, escalation
-├── 4-Splunk/ # Days 16–20: Log correlation, threat detection
-├── 5-Threat-Intel-Forensics/ # Days 21–25: WHOIS, VirusTotal, OSINT
-├── 6-Wazuh-Endpoint-Detection/ # Days 26–30: Real-time detection rules, alerting
-├── Screenshots/ # Annotated screenshots used across labs
-├── .gitignore
-├── LICENSE
-└── README.md
-
-
-Each **DAYXX** folder includes:
-- `README.md` : Goals, tools used, analysis steps, alerts observerd, takeaways
-- Referenced screenshots from `Screenshots/` 
+| Folder | Theme |
+|--------|-------|
+| `1-Log-Analysis/` | Basic log analysis on Linux & Windows |
+| `2-Wireshark-Basics/` | Network traffic inspection with Wireshark |
+| `3-Incident-Response/` | Realistic IR scenarios (brute force, malware, phishing) |
+| `4-Splunk-Detection/` | Threat detection with SPL queries |
+| `5-Threat-Intel-Forensics/` | Phishing, malware, IOC extraction |
+| `6-EDR-Wazuh-Labs/` | SIEM/EDR lab using Wazuh, Suricata, FIM, vulnerability detection |
 
 ---
 
-## 🚀 Tools & Platforms Used
+## 📌 Highlighted Labs
 
-
-| Tool/Platform     | Purpose                                  |
-|-------------------|------------------------------------------|
-| **Splunk (Free)** | Log correlation and custom detection     |
-| **Wireshark**     | Network traffic analysis via PCAP        |
-| **Wazuh 4.10.1**  | SIEM/EDR deployment, rule tuning         |
-| **Suricata**      | IDS integration and rule testing         |
-| **VirusTotal**    | IOC enrichment and threat classification |
-| **Kali Linux**    | Adversary simulation and forensics       |
-| **CyberChef**     | Log decoding, hash conversion, etc.      |
+| Day | Lab | Link |
+|-----|-----|------|
+| 04 | UFW Denied Logs (Linux) | [View README](./1-Log-Analysis/Day04_1_Log_Analysis_Linux-UFW-Logs/README.md) |
+| 11 | Windows RDP Brute Force IR | [View README](./3-Incident-Response/Day11_3_Incident_Response_Windows-Service-RDP-Brute-Force-Attack/README.md) |
+| 15 | Outbound C2 Traffic Analysis | [View README](./3-Incident-Response/Day15_3_Incident_Response_Investigate-Outbound-Connection/README.md) |
+| 22 | Phishing Email Analysis | [View README](./5-Threat-Intel-Forensics/Day22_5_Threat_Intel_Forensics_Phishing-Email-Analysis/README.md) |
+| 29 | Port Scan Detection using Suricata | [View README](./6-EDR-Wazuh-Labs/Day29_6_EDR_Wazuh-Suricata_PortScan-Detection/README.md) |
 
 ---
 
-## 🎯 Project Goals
+## 💼 Built With
 
-- Demonstrate practical SOC analyst skills across a full detection/response lifecycle.
-- Document learning for portfolio presentation and future reference.
-- Prepare for cybersecurity roles requiring log analysis, SIEM/EDR tuning, and threat intel.
-
----
-
-## 📈 Sample Outcomes
-
-- ✅ Detected and triaged brute-force SSH attacks using Wazuh.
-- ✅ Investigated real-world threat indicators using OSINT and Splunk.
-- ✅ Parsed logs to identify privilege escalation attempts.
-- ✅ Documented incident response playbooks and decision-making steps.
-- ✅ Tuned detection rules and filtered out false positives.
+- **SIEM/EDR**: Wazuh, Splunk, Suricata
+- **Log Analysis**: Event Viewer, journalctl, syslog, ps, netstat, grep, crontab
+- **Forensics & Threat Intel**: VirusTotal, AbuseIPDB, URLScan.io, CyberChef, AnyRun
+- **Networking Tools**: Wireshark, Nmap, Hydra, curl
+- **OS Platforms**: Ubuntu, Kali Linux, Windows Server
 
 ---
 
-## 📬 Connect With Me
+## 🧑‍💻 Author
 
-📧 Questions or feedback?  
-📎 [Connect with me on LinkedIn](https://linkedin.com/in/sunitanigam-sharma)
+**Sunita Sharma**  
+🔗 [LinkedIn](https://linkedin.com/in/sunitanigam-sharma)
+📁 [Other Cybersecurity Projects](https://github.com/suneetasharma)  
+📫 Contact: Available upon request  
+
+---
+
+## 📌 What's Next?
+
+This is part of a larger Cybersecurity Portfolio. I plan to continue with:
+
+- Security Home Labs using Datadog, OSSIM, and Wazuh
+- Incident Response (Malware, Phishing, DDoS)
+- Cybersecurity Virtual Internship Projects (e.g., Mastercard)
+
+Stay tuned and follow the repo for updates!
 
 ---
 
