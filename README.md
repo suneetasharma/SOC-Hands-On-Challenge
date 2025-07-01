@@ -1,12 +1,12 @@
-# *SOC Analyst 30-Day Challenge*
-
 # 🛡️***30-Day SOC Analyst Hands-On Cybersecurity Challenge***
 
+## 🎯 About the Project
 This repository documents my 30-day hands-on SOC (Security Operations Center) Analyst Challenge. Each day focuses on a practical blue team skill — from log analysis and threat detection to incident response and EDR-based monitoring — using real-world tools like Splunk, Wazuh, Wireshark, Suricata, and forensic platforms.
 
 **Built as part of my cybersecurity self-learning journey and portfolio.**
 
-## 🧠 What I Learned
+## 🧠 Key Learning Outcomes
+
 - 🔎 Log analysis (Windows, Linux, IDS, HTTP, SSH, UFW)
 - 📊 Splunk SPL searches for network & host-based indicators
 - 🛡️ Incident response & containment (brute force, malware, phishing)
@@ -15,30 +15,19 @@ This repository documents my 30-day hands-on SOC (Security Operations Center) An
 
 ---
 
-## 📌 Domains Covered
 
-- 📝 Log Analysis
-- 🌐 Network Traffic & Packet Analysis (Wireshark)
-- 🚨 Incident Response
-- 📊 Splunk Investigations
-- 🕵️ Threat Intelligence
-- 🔍 Digital Forensics
-- 🛠️ Wazuh Setup, Monitoring, and Alerting
-
----
-
-## 🗂️ Project Structure
+## 🗂️ Repository Structure
 
 Each folder contains 5 labs organized by theme:
 
-| Folder | Theme |
-|--------|-------|
-| `1-Log-Analysis/` | Basic log analysis on Linux & Windows |
-| `2-Wireshark-Basics/` | Network traffic inspection with Wireshark |
-| `3-Incident-Response/` | Realistic IR scenarios (brute force, malware, phishing) |
-| `4-Splunk-Detection/` | Threat detection with SPL queries |
-| `5-Threat-Intel-Forensics/` | Phishing, malware, IOC extraction |
-| `6-EDR-Wazuh-Labs/` | SIEM/EDR lab using Wazuh, Suricata, FIM, vulnerability detection |
+| Folder | Description |
+|--------|-------------|
+| `1-Log-Analysis/` | Day 1–5: Linux & Windows logs, PowerShell, UFW |
+| `2-Wireshark-Basics/` | Day 6–10: Packet capture, ICMP, TCP, HTTP, TLS |
+| `3-Incident-Response/` | Day 11–15: IR scenarios — brute force, malware, C2 |
+| `4-Splunk-Detection/` | Day 16–20: Detect SSH, DNS, HTTP, Zeek logs using SPL |
+| `5-Threat-Intel-Forensics/` | Day 21–25: Phishing, malware, header analysis, memory |
+| `6-EDR-Wazuh-Labs/` | Day 26–30: Wazuh EDR setup, FIM, Suricata, vulnerability detection |
 
 ---
 
