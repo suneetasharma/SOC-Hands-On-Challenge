@@ -1,6 +1,7 @@
 # *SOC Analyst 30-Day Challenge*
 
-##🛡️***30-Day SOC Analyst Hands-On Cybersecurity Challenge***
+# 🛡️***30-Day SOC Analyst Hands-On Cybersecurity Challenge***
+
 This repository documents my 30-day hands-on SOC (Security Operations Center) Analyst Challenge. Each day focuses on a practical blue team skill — from log analysis and threat detection to incident response and EDR-based monitoring — using real-world tools like Splunk, Wazuh, Wireshark, Suricata, and forensic platforms.
 
 **Built as part of my cybersecurity self-learning journey and portfolio.**
@@ -87,4 +88,4 @@ This portfolio is just the beginning. Upcoming projects will include:
 
 ---
 
-> _“Let’s detect threats, not just document them.”_ 🔍🔥
+- “Let’s detect threats, not just document them.” 🔍🔥
