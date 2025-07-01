@@ -53,34 +53,37 @@ Each folder contains 5 labs organized by theme:
 
 ---
 
-## 💼 Built With
+## ⚙️ Tools & Technologies Used
 
-- **SIEM/EDR**: Wazuh, Splunk, Suricata
-- **Log Analysis**: Event Viewer, journalctl, syslog, ps, netstat, grep, crontab
-- **Forensics & Threat Intel**: VirusTotal, AbuseIPDB, URLScan.io, CyberChef, AnyRun
-- **Networking Tools**: Wireshark, Nmap, Hydra, curl
-- **OS Platforms**: Ubuntu, Kali Linux, Windows Server
+| Category | Tools |
+|---------|--------|
+| SIEM & EDR | Wazuh, Splunk, Suricata |
+| Log Analysis | Event Viewer, journalctl, netstat, crontab |
+| IR & Forensics | VirusTotal, AbuseIPDB, CyberChef, Hybrid Analysis |
+| Traffic Inspection | Wireshark, Nmap, Hydra, curl |
+| Platforms | Ubuntu, Kali Linux, Windows Server 2019/22 |
 
 ---
 
-## 🧑‍💻 Author
+## 🧑‍💻 About Me
 
 **Sunita Sharma**  
+💼 Cybersecurity QA & Blue Team Enthusiast  
 🔗 [LinkedIn](https://linkedin.com/in/sunitanigam-sharma)
-📁 [Other Cybersecurity Projects](https://github.com/suneetasharma)  
-📫 Contact: Available upon request  
+🌐 [GitHub Portfolio](https://github.com/suneetasharma)
+
 
 ---
 
 ## 📌 What's Next?
 
-This is part of a larger Cybersecurity Portfolio. I plan to continue with:
+This portfolio is just the beginning. Upcoming projects will include:
 
-- Security Home Labs using Datadog, OSSIM, and Wazuh
-- Incident Response (Malware, Phishing, DDoS)
-- Cybersecurity Virtual Internship Projects (e.g., Mastercard)
+- 🔍 Home Labs with Wazuh, Datadog, OSSIM
+- 🛡️ IR projects: Malware, DDoS, Network Intrusions
+- 🎓 Virtual Cybersecurity Internship Challenges (e.g., Mastercard)
 
-Stay tuned and follow the repo for updates!
+📌 *Follow this repo to see what I build next!*
 
 ---
 
