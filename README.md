@@ -26,12 +26,12 @@ Each folder contains 5 labs organized by theme:
 
 | Folder | Description |
 |--------|-------------|
-| `1-Log-Analysis/` | Day 1–5: Linux & Windows logs, PowerShell, UFW |
-| `2-Wireshark-Basics/` | Day 6–10: Packet capture, ICMP, TCP, HTTP, TLS |
-| `3-Incident-Response/` | Day 11–15: IR scenarios — brute force, malware, C2 |
-| `4-Splunk-Detection/` | Day 16–20: Detect SSH, DNS, HTTP, Zeek logs using SPL |
-| `5-Threat-Intel-Forensics/` | Day 21–25: Phishing, malware, header analysis, memory |
-| `6-EDR-Wazuh-Labs/` | Day 26–30: Wazuh EDR setup, FIM, Suricata, vulnerability detection |
+| `01_Log-Analysis/` | Day 1–5: Linux & Windows logs, PowerShell, UFW |
+| `02_Network_Traffic_Analysis/` | Day 6–10: Packet capture, ICMP, TCP, HTTP, TLS |
+| `03_Incident-Response/` | Day 11–15: IR scenarios — brute force, malware, C2 |
+| `04_Splunk_Log_Analysis/` | Day 16–20: Detect SSH, DNS, HTTP, Zeek logs using SPL |
+| `05_Threat_Intel_And_Forensics/` | Day 21–25: Phishing, malware, header analysis, memory |
+| `06_Wazuh_Endpoint_Detection_Response/` | Day 26–30: Wazuh EDR setup, FIM, Suricata, vulnerability detection |
 
 ---
 
