@@ -1,6 +1,6 @@
 # 🛡️ 30-Day SOC Analyst Hands-On Cybersecurity Challenge
 
-## 📚 Table of Contents
+## Table of Contents
 
 - [🎯 About the Project](#-about-the-project)
 - [🧠 Key Learning Outcomes](#-key-learning-outcomes)
@@ -17,7 +17,7 @@
 
 ## 🎯 About the Project
 
-<p align="right">[⬆️ Back to Top](#-table-of-contents)</p>
+<p align="right">[⬆️ Back to Top](#table-of-contents)</p>
 
 This repository documents my 30-day hands-on SOC (Security Operations Center) Analyst Challenge. Each day focuses on a practical blue team skill — from log analysis and threat detection to incident response and EDR-based monitoring — using real-world tools like Splunk, Wazuh, Wireshark, Suricata, and forensic platforms.
 
@@ -25,7 +25,7 @@ This repository documents my 30-day hands-on SOC (Security Operations Center) An
 
 ## 🧠 Key Learning Outcomes
 
-<p align="right">[⬆️ Back to Top](#-table-of-contents)</p>
+<p align="right">[⬆️ Back to Top](#table-of-contents)</p>
 
 
 - 🔎 Log analysis (Windows, Linux, IDS, HTTP, SSH, UFW)
@@ -57,22 +57,20 @@ Each folder contains 5 labs organized by theme:
 
 ## 📌 Highlighted Labs
 
-<p align="right">[⬆️ Back to Top](#-table-of-contents)</p>
+| Day | Lab Description                        | Link |
+|-----|----------------------------------------|------|
+| 04  | UFW Denied Logs (Linux)                | [View README](01_Log_Analysis/Day04_01_Log_Analysis_Linux-UFW-Logs/README.md) |
+| 11  | Windows RDP Brute Force IR             | [View README](03_Incident_Response/Day11_03_Incident_Response_Windows-Service-RDP-Brute-Force-Attack/README.md) |
+| 15  | Outbound C2 Traffic Analysis           | [View README](03_Incident_Response/Day15_03_Incident_Response_Linux-Suspicious-Network-Connection/README.md) |
+| 22  | Phishing Email Analysis                | [View README](05_Threat_Intel_Forensics/Day22_05_Threat_Intel_Forensics_Phishing-Email-Analysis/README.md) |
+| 29  | Port Scan Detection using Suricata     | [View README](06_Wazuh_Endpoint_Detection/Day29_06_EDR_Detecting-Suspicious-Network-Traffic-Using-Suricata/README.md) |
 
-
-| Day | Lab | Link |
-|-----|-----|------|
-| 04 | UFW Denied Logs (Linux) | [View README](./1-Log-Analysis/Day04_1_Log_Analysis_Linux-UFW-Logs/README.md) |
-| 11 | Windows RDP Brute Force IR | [View README](./3-Incident-Response/Day11_3_Incident_Response_Windows-Service-RDP-Brute-Force-Attack/README.md) |
-| 15 | Outbound C2 Traffic Analysis | [View README](./3-Incident-Response/Day15_3_Incident_Response_Investigate-Outbound-Connection/README.md) |
-| 22 | Phishing Email Analysis | [View README](./5-Threat-Intel-Forensics/Day22_5_Threat_Intel_Forensics_Phishing-Email-Analysis/README.md) |
-| 29 | Port Scan Detection using Suricata | [View README](./6-EDR-Wazuh-Labs/Day29_6_EDR_Wazuh-Suricata_PortScan-Detection/README.md) |
 
 ---
 
 ## ⚙️ Tools & Technologies Used
 
-<p align="right">[⬆️ Back to Top](#-table-of-contents)</p>
+<p align="right">[⬆️ Back to Top](#table-of-contents)</p>
 
 
 | Category | Tools |
