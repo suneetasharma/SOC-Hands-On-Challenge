@@ -1,32 +1,15 @@
 # 🛡️ 30-Day SOC Analyst Hands-On Cybersecurity Challenge
 
-## 📚 Table of Contents
-
-- [🎯 About the Project](#-about-the-project)
-- [🧠 Key Learning Outcomes](#-key-learning-outcomes)
-- [🗂️ Repository Structure](#️-repository-structure)
-- [📌 Highlighted Labs](#-highlighted-labs)
-- [⚙️ Tools & Technologies Used](#️-tools--technologies-used)
-- [🧑‍💻 About Me](#-about-me)
-- [📌 What's Next?](#-whats-next)
-
-
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Status](https://img.shields.io/badge/project-completed-brightgreen)
 
 
 ## 🎯 About the Project
-
-<p align="right">[⬆️ Back to Top](#-table-of-contents)</p>
-
 This repository documents my 30-day hands-on SOC (Security Operations Center) Analyst Challenge. Each day focuses on a practical blue team skill — from log analysis and threat detection to incident response and EDR-based monitoring — using real-world tools like Splunk, Wazuh, Wireshark, Suricata, and forensic platforms.
 
 **Built as part of my cybersecurity self-learning journey and portfolio.**
 
 ## 🧠 Key Learning Outcomes
-
-<p align="right">[⬆️ Back to Top](#-table-of-contents)</p>
-
 
 - 🔎 Log analysis (Windows, Linux, IDS, HTTP, SSH, UFW)
 - 📊 Splunk SPL searches for network & host-based indicators
@@ -38,9 +21,6 @@ This repository documents my 30-day hands-on SOC (Security Operations Center) An
 
 
 ## 🗂️ Repository Structure
-
-<p align="right">[⬆️ Back to Top](#-table-of-contents)</p>
-
 
 Each folder contains 5 labs organized by theme:
 
@@ -57,9 +37,6 @@ Each folder contains 5 labs organized by theme:
 
 ## 📌 Highlighted Labs
 
-<p align="right">[⬆️ Back to Top](#-table-of-contents)</p>
-
-
 | Day | Lab | Link |
 |-----|-----|------|
 | 04 | UFW Denied Logs (Linux) | [View README](./1-Log-Analysis/Day04_1_Log_Analysis_Linux-UFW-Logs/README.md) |
@@ -71,9 +48,6 @@ Each folder contains 5 labs organized by theme:
 ---
 
 ## ⚙️ Tools & Technologies Used
-
-<p align="right">[⬆️ Back to Top](#-table-of-contents)</p>
-
 
 | Category | Tools |
 |---------|--------|
@@ -87,9 +61,6 @@ Each folder contains 5 labs organized by theme:
 
 ## 🧑‍💻 About Me
 
-<p align="right">[⬆️ Back to Top](#-table-of-contents)</p>
-
-
 **Sunita Sharma**  
 🔐 Cybersecurity QA Engineer & Blue Team Practitioner  
 📌 Passionate about incident response, log analysis, threat detection, and EDR  
@@ -100,9 +71,6 @@ Each folder contains 5 labs organized by theme:
 ---
 
 ## 📌 What's Next?
-
-<p align="right">[⬆️ Back to Top](#-table-of-contents)</p>
-
 
 This portfolio is just the beginning. Upcoming projects will include:
 
