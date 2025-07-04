@@ -14,9 +14,6 @@
 ![Status](https://img.shields.io/badge/project-completed-brightgreen)
 
 ---
-
-## About the Project
-
 ## About the Project
 
 [⬆️ Back to Top](#table-of-contents)
@@ -30,8 +27,6 @@ This repository documents my 30-day hands-on SOC (Security Operations Center) An
 
 ## Key Learning Outcomes
 
-## About the Project
-
 [⬆️ Back to Top](#table-of-contents)
 
 - 🔎 Log analysis (Windows, Linux, IDS, HTTP, SSH, UFW)
@@ -43,8 +38,6 @@ This repository documents my 30-day hands-on SOC (Security Operations Center) An
 ---
 
 ## Repository Structure
-
-## About the Project
 
 [⬆️ Back to Top](#table-of-contents)
 
@@ -63,8 +56,6 @@ Each folder contains 5 labs organized by theme:
 
 ## Highlighted Labs
 
-## About the Project
-
 [⬆️ Back to Top](#table-of-contents)
 
 
@@ -80,8 +71,6 @@ Each folder contains 5 labs organized by theme:
 
 ## Tools & Technologies Used
 
-## About the Project
-
 [⬆️ Back to Top](#table-of-contents)
 
 | Category | Tools |
@@ -96,8 +85,6 @@ Each folder contains 5 labs organized by theme:
 
 ## About Me
 
-## About the Project
-
 [⬆️ Back to Top](#table-of-contents)
 
 
@@ -110,8 +97,6 @@ Each folder contains 5 labs organized by theme:
 ---
 
 ## What's Next?
-
-## About the Project
 
 [⬆️ Back to Top](#table-of-contents)
 
