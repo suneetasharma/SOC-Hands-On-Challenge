@@ -17,7 +17,10 @@
 
 ## About the Project
 
-<p align="right">[⬆️ Back to Top](#table-of-contents)</p>
+## About the Project
+
+[⬆️ Back to Top](#table-of-contents)
+
 
 This repository documents my 30-day hands-on SOC (Security Operations Center) Analyst Challenge. Each day focuses on a practical blue team skill — from log analysis and threat detection to incident response and EDR-based monitoring — using real-world tools like Splunk, Wazuh, Wireshark, Suricata, and forensic platforms.
 
@@ -27,7 +30,9 @@ This repository documents my 30-day hands-on SOC (Security Operations Center) An
 
 ## Key Learning Outcomes
 
-<p align="right">[⬆️ Back to Top](#table-of-contents)</p>
+## About the Project
+
+[⬆️ Back to Top](#table-of-contents)
 
 - 🔎 Log analysis (Windows, Linux, IDS, HTTP, SSH, UFW)
 - 📊 Splunk SPL searches for network & host-based indicators
@@ -39,7 +44,9 @@ This repository documents my 30-day hands-on SOC (Security Operations Center) An
 
 ## Repository Structure
 
-<p align="right">[⬆️ Back to Top](#table-of-contents)</p>
+## About the Project
+
+[⬆️ Back to Top](#table-of-contents)
 
 Each folder contains 5 labs organized by theme:
 
@@ -56,7 +63,10 @@ Each folder contains 5 labs organized by theme:
 
 ## Highlighted Labs
 
-<p align="right">[⬆️ Back to Top](#table-of-contents)</p>
+## About the Project
+
+[⬆️ Back to Top](#table-of-contents)
+
 
 | Day | Lab Description                        | Link |
 |-----|----------------------------------------|------|
@@ -70,7 +80,9 @@ Each folder contains 5 labs organized by theme:
 
 ## Tools & Technologies Used
 
-<p align="right">[⬆️ Back to Top](#table-of-contents)</p>
+## About the Project
+
+[⬆️ Back to Top](#table-of-contents)
 
 | Category | Tools |
 |---------|--------|
@@ -84,7 +96,10 @@ Each folder contains 5 labs organized by theme:
 
 ## About Me
 
-<p align="right">[⬆️ Back to Top](#table-of-contents)</p>
+## About the Project
+
+[⬆️ Back to Top](#table-of-contents)
+
 
 **Sunita Sharma**  
 🔐 Cybersecurity QA Engineer & Blue Team Practitioner  
@@ -96,7 +111,10 @@ Each folder contains 5 labs organized by theme:
 
 ## What's Next?
 
-<p align="right">[⬆️ Back to Top](#table-of-contents)</p>
+## About the Project
+
+[⬆️ Back to Top](#table-of-contents)
+
 
 This portfolio is just the beginning. Upcoming projects will include:
 
