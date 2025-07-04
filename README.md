@@ -60,9 +60,9 @@ Each folder contains 5 labs organized by theme:
 
 | Day | Lab Description                        | Link |
 |-----|----------------------------------------|------|
-| 04  | UFW Denied Logs (Linux)                | [View README](01_Log-Analysis/Day04_1_Log_Analysis_Linux-UFW-Logs/README.md) |
-| 11  | Windows RDP Brute Force IR             | [View README](03_Incident-Response/Day11_3_Incident_Response_Windows-Service-RDP-Brute-Force-Attack/README.md) |
-| 15  | Outbound C2 Traffic Analysis           | [View README](03_Incident-Response/Day15_3_Incident_Response_Linux-Suspicious-Network-Connection/README.md) |
+| 04  | UFW Denied Logs (Linux)                | [View README](01_Log_Analysis/Day04_1_Log_Analysis_Linux-UFW-Logs/README.md) |
+| 11  | Windows RDP Brute Force IR             | [View README](03_Incident_Response/Day11_3_Incident_Response_Windows-Service-RDP-Brute-Force-Attack/README.md) |
+| 15  | Outbound C2 Traffic Analysis           | [View README](03_Incident_Response/Day15_3_Incident_Response_Linux-Suspicious-Network-Connection/README.md) |
 | 22  | Phishing Email Analysis                | [View README](05_Threat_Intel_And_Forensics/Day22_5_Threat_Intel_Forensics_Phishing-Email-Analysis/README.md) |
 | 29  | Port Scan Detection using Suricata     | [View README](06_Wazuh_Endpoint_Detection_Response/Day29_6_Wazuh_Endpoint_Detection_Suricata-IDS-Wazuh-Agent/README.md) |
 
