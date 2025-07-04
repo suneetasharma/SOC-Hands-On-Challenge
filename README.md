@@ -15,7 +15,7 @@
 ![Status](https://img.shields.io/badge/project-completed-brightgreen)
 
 
-## 🎯 About the Project
+## About the Project
 
 <p align="right">[⬆️ Back to Top](#table-of-contents)</p>
 
@@ -23,7 +23,7 @@ This repository documents my 30-day hands-on SOC (Security Operations Center) An
 
 **Built as part of my cybersecurity self-learning journey and portfolio.**
 
-## 🧠 Key Learning Outcomes
+## Key Learning Outcomes
 
 <p align="right">[⬆️ Back to Top](#table-of-contents)</p>
 
@@ -37,7 +37,7 @@ This repository documents my 30-day hands-on SOC (Security Operations Center) An
 ---
 
 
-## 🗂️ Repository Structure
+## Repository Structure
 
 <p align="right">[⬆️ Back to Top](#-table-of-contents)</p>
 
@@ -55,20 +55,21 @@ Each folder contains 5 labs organized by theme:
 
 ---
 
-## 📌 Highlighted Labs
+## Highlighted Labs
 
 | Day | Lab Description                        | Link |
 |-----|----------------------------------------|------|
-| 04  | UFW Denied Logs (Linux)                | [View README](01_Log_Analysis/Day04_01_Log_Analysis_Linux-UFW-Logs/README.md) |
-| 11  | Windows RDP Brute Force IR             | [View README](03_Incident_Response/Day11_03_Incident_Response_Windows-Service-RDP-Brute-Force-Attack/README.md) |
-| 15  | Outbound C2 Traffic Analysis           | [View README](03_Incident_Response/Day15_03_Incident_Response_Linux-Suspicious-Network-Connection/README.md) |
-| 22  | Phishing Email Analysis                | [View README](05_Threat_Intel_Forensics/Day22_05_Threat_Intel_Forensics_Phishing-Email-Analysis/README.md) |
-| 29  | Port Scan Detection using Suricata     | [View README](06_Wazuh_Endpoint_Detection/Day29_06_EDR_Detecting-Suspicious-Network-Traffic-Using-Suricata/README.md) |
+| 04  | UFW Denied Logs (Linux)                | [View README](01_Log_Analysis/Day04_1_Log_Analysis_Linux-UFW-Logs/README.md) |
+| 11  | Windows RDP Brute Force IR             | [View README](03_Incident_Response/Day11_3_Incident_Response_Windows-Service-RDP-Brute-Force-Attack/README.md) |
+| 15  | Outbound C2 Traffic Analysis           | [View README](03_Incident_Response/Day15_3_Incident_Response_Linux-Suspicious-Network-Connection/README.md) |
+| 22  | Phishing Email Analysis                | [View README](05_Threat_Intel_Forensics/Day22_5_Threat_Intel_Forensics_Phishing-Email-Analysis/README.md) |
+| 29  | Port Scan Detection using Suricata     | [View README](06_Wazuh_Endpoint_Detection/Day29_6_EDR_Detecting-Suspicious-Network-Traffic-Using-Suricata/README.md) |
+
 
 
 ---
 
-## ⚙️ Tools & Technologies Used
+## Tools & Technologies Used
 
 <p align="right">[⬆️ Back to Top](#table-of-contents)</p>
 
@@ -83,7 +84,7 @@ Each folder contains 5 labs organized by theme:
 
 ---
 
-## 🧑‍💻 About Me
+## About Me
 
 <p align="right">[⬆️ Back to Top](#-table-of-contents)</p>
 
@@ -97,7 +98,7 @@ Each folder contains 5 labs organized by theme:
 
 ---
 
-## 📌 What's Next?
+## What's Next?
 
 <p align="right">[⬆️ Back to Top](#-table-of-contents)</p>
 
