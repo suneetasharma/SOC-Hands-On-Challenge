@@ -1,4 +1,4 @@
-# 5 Threat Intelligent and Forensics
+# 05 Threat Intelligent and Forensics
 This Threat Intelligent and Forensics lab contains Hands-On for Days 21-25:
 - Phishing
 - Header forensics

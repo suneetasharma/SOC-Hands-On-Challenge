@@ -1,4 +1,4 @@
-# 301 - Log Analysis
+# 01 - Log Analysis
 This Wazuh EDR lab contains Hands-On for Days 01-05:
 - Linux
 - Windows
