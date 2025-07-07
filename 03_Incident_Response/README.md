@@ -1,5 +1,5 @@
 # 03 Incident Response
-This Wazuh EDR lab contains Hands-On for Days 11-15:
+This section contains Days 11-15 Hands-On:
 - Real-world incident response labs for
     - Brute Force
     - Malware

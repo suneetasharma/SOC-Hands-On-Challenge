@@ -1,5 +1,5 @@
 # 04 Splunk Log Analysis
-This Splunk Log Analysis lab contains Hands-On for Days 16-20:
+This Splunk Log Analysis lab contains Days 16-20 Hands-On:
 - Splunk SPL queries to analysis
     - SSH
     - DNS

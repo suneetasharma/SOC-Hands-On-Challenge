@@ -1,5 +1,5 @@
 # 01 - Log Analysis
-This Wazuh EDR lab contains Hands-On for Days 01-05:
+This section contains Days 01-05 Hands-On labs in:
 - Linux
 - Windows
 - PowerShell
